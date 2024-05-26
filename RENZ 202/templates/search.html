@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block title %}Search - RENZ{% endblock %}
+
+{% block content %}
+<div class="search-container container">
+    <div class="search-bar">
+        <form>
+            <input type="text" placeholder="Search by address, suburb or city">
+            <button type="submit">Search</button>
+        </form>
+    </div>
+    <div class="filters">
+        <button class="filter-btn">Buy</button>
+        <button class="filter-btn">Rent</button>
+        <button class="filter-btn">Valuation</button>
+    </div>
+</div>
+
+<div class="properties-map container">
+    <div class="properties-list">
+        <h2>For Sale</h2>
+        {% for property in properties_for_sale %}
+        <div class="property">
+            <img src="{{ url_for('static', filename='property.png') }}" alt="Property Image">
+            <div class="property-details">
+                <p>{{ property.title }}</p>
+                <p>{{ property.price }}</p>
+                <p>{{ property.bedrooms }} Bedrooms, {{ property.bathrooms }} Bathrooms, {{ property.carparks }} Carparks</p>
+                <p>{{ property.date }}</p>
+            </div>
+        </div>
+        {% endfor %}
+        
+        <h2>For Rent</h2>
+        {% for property in properties_for_rent %}
+        <div class="property">
+            <img src="{{ url_for('static', filename='property.png') }}" alt="Property Image">
+            <div class="property-details">
+                <p>{{ property.title }}</p>
+                <p>{{ property.price }}</p>
+                <p>{{ property.bedrooms }} Bedrooms, {{ property.bathrooms }} Bathrooms, {{ property.carparks }} Carparks</p>
+                <p>{{ property.date }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="map">
+        <img src="{{ url_for('static', filename='map.jpg') }}" alt="Map Placeholder">
+    </div>
+</div>
+{% endblock %}

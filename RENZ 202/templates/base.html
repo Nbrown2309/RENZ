@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}RENZ{% endblock %}</title>
+    <link rel="stylesheet" type="text/css"
+    href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <a href="{{ url_for('index') }}">
+                <img src="{{ url_for('static', filename='renzlogo.png') }}" alt="RENZ Logo" style="width: 120%;">
+            </a>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Residential</a></li>
+                <li><a href="{{url_for('search')}}">New Build</a></li>
+                <li><a href="{{url_for('search')}}">Rural</a></li>
+                <li><a href="#">Commercial</a></li>
+                <li><a href="#">Business</a></li>
+                <li><a href="#">House Price</a></li>
+                <li><a href="{{url_for('findagent')}}">Find Agent</a></li>
+                <li><a href="#">Home Inspiration</a></li>
+                <li><a href="#">News</a></li>
+            </ul>
+            <div class="nav-right">
+                <a href="#">Favorite</a>
+                <a href="#">My Home</a>
+                <a href="#">Log in / Sign up</a>
+            </div>
+        </nav>
+    </header>
+    <main class="container">
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>&copy; RENZ</p>
+    </footer>
+</body>
+</html>
