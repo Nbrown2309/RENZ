@@ -5,8 +5,6 @@ body {
     box-sizing: border-box;
 }
 
-
-
 h3{
     margin-left: 550px;
     margin-right: 550px;
@@ -22,7 +20,7 @@ h3{
 .nav-tabs .nav-item .nav-link.active {
     color: #00aaff;
     background-color: transparent;
-    margin-left: 20px;
+    
 }
 
 main{
@@ -52,7 +50,16 @@ nav {
     padding: 0 1rem;
 }
 
+.nav-item{
+    margin-left: 550px;
+    margin-right: 550px;
+    align-items: center;
+}
 
+.search-box{
+    margin-left: 160px;
+    margin-right: 160px;
+}
 
 nav img {
     height: 50px;
@@ -100,3 +107,5 @@ nav ul li a:hover {
 .nav-right a:hover {
     text-decoration: underline;
 }
+
+

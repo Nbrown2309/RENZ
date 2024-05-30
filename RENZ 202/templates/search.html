@@ -1,52 +1,68 @@
-{% extends 'base.html' %}
+<div style="width: 100%; height: 100%; position: relative; background: white">
+    <img style="width: 989px; height: 1066px; left: 739px; top: 51px; position: absolute" src="{{ url_for('static', filename='map.png')}}" />
 
-{% block title %}Search - RENZ{% endblock %}
+    <a href="/" style="text-decoration: none;">
+        <div style="left: 210px; top: 18px; position: absolute; color: #5495A5; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Residential</div>
+    </a>
+    <a href="/search" style="text-decoration: none;">
+        <div style="left: 326px; top: 18px; position: absolute; color: #5495A5; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">New Build</div>
+    </a>
+    <a href="/search" style="text-decoration: none;">
+        <div style="left: 435px; top: 18px; position: absolute; color: #5495A5; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Rural</div>
+    </a>
+    <a href="/search" style="text-decoration: none;">
+        <div style="left: 513px; top: 18px; position: absolute; color: #5495A5; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Commercial</div>
+    </a>
+    <a href="/search" style="text-decoration: none;">
+        <div style="left: 634px; top: 18px; position: absolute; color: #5495A5; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Business</div>
+    </a>
+    <a href="/" style="text-decoration: none;">
+        <div style="left: 734px; top: 18px; position: absolute; color: #5495A5; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">House Price</div>
+    </a>
+    <a href="/search" style="text-decoration: none;">
+        <div style="left: 854px; top: 18px; position: absolute; color: #5495A5; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Find Agent</div>
+    </a>
+    <a href="/homeinspiration" style="text-decoration: none;">
+        <div style="left: 968px; top: 18px; position: absolute; color: #5495A5; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Home Inspiration</div>
+    </a>
+    <a href="/news" style="text-decoration: none;">
+        <div style="left: 1122px; top: 18px; position: absolute; color: #5495A5; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">News</div>
+    </a>
+    <a href="/favorite" style="text-decoration: none;">
+        <div style="left: 1433px; top: 18px; position: absolute; color: #5495A5; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Favorite<br/></div>
+    </a>
+    <a href="/my-home" style="text-decoration: none;">
+        <div style="left: 1528px; top: 18px; position: absolute; color: #5495A5; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">My Home</div>
+    </a>
+    <a href="/login_and_signup" style="text-decoration: none;">
+        <div style="left: 1611px; top: 18px; position: absolute; color: #5495A5; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Log in / Sign up</div>
+    </a>
 
-{% block content %}
-<div class="search-container container">
-    <div class="search-bar">
-        <form>
-            <input type="text" placeholder="Search by address, suburb or city">
-            <button type="submit">Search</button>
-        </form>
+    <img style="width: 100px; height: 40px; left: 11px; top: 6px; position: absolute" src="{{ url_for('static', filename='renzlogo.png') }}" />
+
+    <div style="width: 16px; height: 16px; left: 1412px; top: 19px; position: absolute">
+        <div style="width: 14.67px; height: 13.33px; left: 0.67px; top: 0.67px; position: absolute; border: 1.50px #396874 solid"></div>
     </div>
-    <div class="filters">
-        <button class="filter-btn">Buy</button>
-        <button class="filter-btn">Rent</button>
-        <button class="filter-btn">Valuation</button>
-    </div>
-</div>
-
-<div class="properties-map container">
-    <div class="properties-list">
-        <h2>For Sale</h2>
-        {% for property in properties_for_sale %}
-        <div class="property">
-            <img src="{{ url_for('static', filename='property.png') }}" alt="Property Image">
-            <div class="property-details">
-                <p>{{ property.title }}</p>
-                <p>{{ property.price }}</p>
-                <p>{{ property.bedrooms }} Bedrooms, {{ property.bathrooms }} Bathrooms, {{ property.carparks }} Carparks</p>
-                <p>{{ property.date }}</p>
-            </div>
+    <div style="width: 16px; height: 16px; left: 1509px; top: 19px; position: absolute">
+        <div style="width: 16px; height: 16px; left: 0px; top: 0px; position: absolute">
+            <div style="width: 12px; height: 13.45px; left: 2px; top: 1.33px; position: absolute; border: 1.50px #396874 solid"></div>
         </div>
-        {% endfor %}
-        
-        <h2>For Rent</h2>
-        {% for property in properties_for_rent %}
-        <div class="property">
-            <img src="{{ url_for('static', filename='property.png') }}" alt="Property Image">
-            <div class="property-details">
-                <p>{{ property.title }}</p>
-                <p>{{ property.price }}</p>
-                <p>{{ property.bedrooms }} Bedrooms, {{ property.bathrooms }} Bathrooms, {{ property.carparks }} Carparks</p>
-                <p>{{ property.date }}</p>
-            </div>
-        </div>
-        {% endfor %}
+        <div style="width: 4px; height: 5.33px; left: 6px; top: 9.33px; position: absolute; border-radius: 1px; border: 1.50px #396874 solid"></div>
     </div>
-    <div class="map">
-        <img src="{{ url_for('static', filename='map.jpg') }}" alt="Map Placeholder">
+
+    <div style="width: 712px; height: 92px; left: 11px; top: 59px; position: absolute">
+        <div style="width: 712px; height: 92px; left: 0px; top: 0px; position: absolute; box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.10); border-radius: 8px; border: 1px #5495A5 solid"></div>
+        <div style="width: 437px; height: 31px; left: 13px; top: 47px; position: absolute; border-radius: 5px; border: 1px #5495A5 solid"></div>
+        <div style="width: 114px; height: 33px; left: 461px; top: 46px; position: absolute; border-radius: 5px; border: 1px #5495A5 solid"></div>
+        <div style="width: 114px; height: 33px; left: 585px; top: 46px; position: absolute; border-radius: 5px; border: 1px #5495A5 solid"></div>
+        <div style="left: 122px; top: 10px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">Buy</div>
+        <div style="left: 50px; top: 54px; position: absolute; color: #CACACA; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">Search by address, suburb or city</div>
+        <div style="left: 518px; top: 55px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">Filter</div>
+        <div style="left: 634px; top: 55px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">Search</div>
+        <div style="left: 545px; top: 10px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">Valuation</div>
+        <div style="left: 331px; top: 10px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">Rent</div>
+        <div style="width: 712px; height: 0px; left: 0px; top: 38px; position: absolute; border: 1px #5495A5 solid"></div>
     </div>
+
+
 </div>
-{% endblock %}
