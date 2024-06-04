@@ -30,5 +30,9 @@ def favorite():
 def myhome():
     return render_template('myhome.html')
 
+@app.route('/detail')
+def deatail():
+    return render_template('detail.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
