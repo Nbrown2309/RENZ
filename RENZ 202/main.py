@@ -22,7 +22,7 @@ def homeinspiration():
 def news():
     return render_template('news.html')
 
-@app.route('/favortie')
+@app.route('/favorite')
 def favorite():
     return render_template('favorite.html')
 
