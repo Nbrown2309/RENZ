@@ -31,8 +31,12 @@ def myhome():
     return render_template('myhome.html')
 
 @app.route('/detail')
-def deatail():
+def detail():
     return render_template('detail.html')
+
+@app.route('/login_and_signup')
+def login_and_signup():
+    return render_template('login_and_signup.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

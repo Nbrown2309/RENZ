@@ -55,26 +55,48 @@
     </div>
 
     <div style="width: 712px; height: 92px; left: 11px; top: 59px; position: absolute">
-        <div style="width: 712px; height: 92px; left: 0px; top: 0px; position: absolute; box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.10); border-radius: 8px; border: 1px #5495A5 solid"></div>
-        <div style="width: 437px; height: 31px; left: 13px; top: 47px; position: absolute; border-radius: 5px; border: 1px #5495A5 solid"></div>
-        <div style="width: 114px; height: 33px; left: 461px; top: 46px; position: absolute; border-radius: 5px; border: 1px #5495A5 solid"></div>
-        <div style="width: 114px; height: 33px; left: 585px; top: 46px; position: absolute; border-radius: 5px; border: 1px #5495A5 solid"></div>
-        <div style="left: 122px; top: 10px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">Buy</div>
-        <div style="left: 50px; top: 54px; position: absolute; color: gray; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">Search by address, suburb or city</div>
-        <div style="left: 518px; top: 55px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">Filter</div>
-        <div style="left: 634px; top: 55px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">Search</div>
-        <div style="left: 545px; top: 10px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">Valuation</div>
-        <div style="left: 331px; top: 10px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">Rent</div>
-        <div style="width: 712px; height: 0px; left: 0px; top: 38px; position: absolute; border: 1px #5495A5 solid"></div>
+    <div style="width: 712px; height: 92px; left: 0px; top: 0px; position: absolute; box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.10); border-radius: 8px; border: 1px #5495A5 solid"></div>
+    
+    <div style="width: 437px; height: 31px; left: 13px; top: 47px; position: absolute; border-radius: 5px; border: 1px #5495A5 solid">
+        <input type="text" placeholder="Search by address, suburb or city" style="width: 100%; height: 100%; border: none; border-radius: 5px; padding: 0 10px; font-size: 12px; font-family: Noto Sans;" />
     </div>
+    
+    <div style="width: 114px; height: 33px; left: 461px; top: 46px; position: absolute; border-radius: 5px; border: 1px #5495A5 solid">
+        <a href="/detail"></a><button style="width: 100%; height: 100%; border: none; border-radius: 5px; font-size: 12px; font-family: Noto Sans; background-color: white;">Filter</button>
+    </div>
+    
+    <div style="width: 114px; height: 33px; left: 585px; top: 46px; position: absolute; border-radius: 5px; border: 1px #5495A5 solid">
+        <button style="width: 100%; height: 100%; border: none; border-radius: 5px; font-size: 12px; font-family: Noto Sans; background-color: white;">Search</button>
+    </div>
+    
+    <div style="left: 122px; top: 10px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">
+        <button style="border: none; background: none; font-size: 12px; font-family: Noto Sans; font-weight: 500;">Buy</button>
+    </div>
+    
+    <div style="left: 545px; top: 10px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">
+        <button style="border: none; background: none; font-size: 12px; font-family: Noto Sans; font-weight: 500;">Valuation</button>
+    </div>
+    
+    <div style="left: 331px; top: 10px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">
+        <button style="border: none; background: none; font-size: 12px; font-family: Noto Sans; font-weight: 500;">Rent</button>
+    </div>
+    
+    <div style="width: 712px; height: 0px; left: 0px; top: 38px; position: absolute; border: 1px #5495A5 solid"></div>
+</div>
 
+
+    <!--Following Interactable Property Images -->
     <!--Interactable Images which leads you to the Direct Page-->
     <div style="width: 344px; height: 279.29px; left: 11px; top: 200px; position: absolute">
         <div style="width: 240.12px; height: 25.54px; left: 0px; top: 224.79px; position: absolute; color: black; font-size: 11px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">To be sold by auction on...</div>
         <div style="width: 214.57px; height: 18.73px; left: 0px; top: 260.55px; position: absolute; color: black; font-size: 8px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">1/23 Ashwell Street, Saint Heliers</div>
         <div style="width: 80.04px; height: 18.73px; left: 263.96px; top: 260.55px; position: absolute; text-align: right; color: black; font-size: 8px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">30 Mar 2024</div>
+        
+        <!--Navigating to the Details Page-->
         <a href="/detail"><img style="width: 344px; height: 209.47px; left: 0px; top: 0px; position: absolute" src="{{url_for ('static', filename='property.png')}}" /></a>
-        <a href="/detail"><img style="width: 86.85px; height: 20.44px; left: 257.15px; top: 229.90px; position: absolute" src="https://via.placeholder.com/87x20" /></a>
+        <a href="/detail"><img style="width: 86.85px; height: 20.44px; left: 257.15px; top: 229.90px; position: absolute" src="{{url_for ('static', filename='occupants.png')}}" /></a>
+       
+       <!--Favorite Icon-->
         <div style="width: 27.25px; height: 27.25px; left: 308.24px; top: 5.11px; position: absolute">
             <div style="width: 24.98px; height: 22.71px; left: 1.14px; top: 1.14px; position: absolute; border: 1.50px #396874 solid"></div>
         </div>
@@ -85,10 +107,13 @@
         <div style="width: 214.57px; height: 18.73px; left: 0px; top: 260.55px; position: absolute; color: black; font-size: 8px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">1/23 Ashwell Street, Saint Heliers</div>
         <div style="width: 80.04px; height: 18.73px; left: 263.96px; top: 260.55px; position: absolute; text-align: right; color: black; font-size: 8px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">30 Mar 2024</div>
         <a href="/detail"><img style="width: 344px; height: 209.47px; left: 0px; top: 0px; position: absolute" src="{{url_for ('static', filename='property.png')}}" /></a>
-        <a href="/detail"><img style="width: 86.85px; height: 20.44px; left: 257.15px; top: 229.90px; position: absolute" src="https://via.placeholder.com/87x20" /></a>
+        <a href="/detail"><img style="width: 86.85px; height: 20.44px; left: 257.15px; top: 229.90px; position: absolute" src="{{url_for ('static', filename='occupants.png')}}" /></a>
         <div style="width: 27.25px; height: 27.25px; left: 308.24px; top: 5.11px; position: absolute"></div>
+
+        <!--Favorite Icon-->
         <div style="width: 29px; height: 29px; left: 306px; top: 4px; position: absolute">
-            <div style="width: 26.58px; height: 24.17px; left: 1.21px; top: 1.21px; position: absolute; background: #FF5656; box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.10) inset"></div>
+            <a href="/detail"><img style="width: 26.58px; height: 24.17px; left: 1.21px; top: 1.21px; position: absolute; box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.10) inset" src="{{url_for ('static', filename='favoriteheart.png')}}"></a>
+            <div style="width: 26.58px; height: 24.17px; left: 1.21px; top: 1.21px; position: absolute; box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.10) inset"></div>
         </div>
     </div>
     
@@ -97,9 +122,12 @@
         <div style="width: 214.57px; height: 18.73px; left: 0px; top: 260.55px; position: absolute; color: black; font-size: 8px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">1/23 Ashwell Street, Saint Heliers</div>
         <div style="width: 80.04px; height: 18.73px; left: 263.96px; top: 260.55px; position: absolute; text-align: right; color: black; font-size: 8px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">30 Mar 2024</div>
         <a href="/detail"><img style="width: 344px; height: 209.47px; left: 0px; top: 0px; position: absolute" src="{{url_for ('static', filename='property.png')}}" /></a>
-        <a href="/detail"><img style="width: 86.85px; height: 20.44px; left: 257.15px; top: 229.90px; position: absolute" src="https://via.placeholder.com/87x20" /></a>
+        <a href="/detail"><img style="width: 86.85px; height: 20.44px; left: 257.15px; top: 229.90px; position: absolute" src="{{url_for ('static', filename='occupants.png')}}" /></a>
+        
+        <!--Favorite Icon-->
         <div style="width: 27.25px; height: 27.25px; left: 308.24px; top: 5.11px; position: absolute">
-            <div style="width: 24.98px; height: 22.71px; left: 1.14px; top: 1.14px; position: absolute; border: 1.50px #396874 solid"></div>
+            <a href="/detail"><img style="width: 24.98px; height: 22.71px; left: 1.14px; top: 1.14px; position: absolute; border: 1.50px #396874 solid" src="{{url_for ('static', filename='favoriteheart.png')}}" /></a>
+            <div style="width: 24.98px; height: 22.71px; left: 1.14px; top: 1.14px; position: absolute; border: 1.50px #396874 solid" ></div>
         </div>
     </div>
     
@@ -108,8 +136,11 @@
         <div style="width: 214.57px; height: 18.73px; left: 0px; top: 260.55px; position: absolute; color: black; font-size: 8px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">1/23 Ashwell Street, Saint Heliers</div>
         <div style="width: 80.04px; height: 18.73px; left: 263.96px; top: 260.55px; position: absolute; text-align: right; color: black; font-size: 8px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">30 Mar 2024</div>
         <a href="/detail"><img style="width: 344px; height: 209.47px; left: 0px; top: 0px; position: absolute" src="{{url_for ('static', filename='property.png')}}" /></a>
-        <a href="/detail"><img style="width: 86.85px; height: 20.44px; left: 257.15px; top: 229.90px; position: absolute" src="https://via.placeholder.com/87x20" /></a>
+        <a href="/detail"><img style="width: 86.85px; height: 20.44px; left: 257.15px; top: 229.90px; position: absolute" src="{{url_for ('static', filename='occupants.png')}}" /></a>
+
+        <!--Favorite Icon-->
         <div style="width: 27.25px; height: 27.25px; left: 308.24px; top: 5.11px; position: absolute">
+            <a href="/detail"><img style="width: 24.98px; height: 22.71px; left: 1.14px; top: 1.14px; position: absolute; border: 1.50px #396874 solid" src="{{url_for ('static', filename='favoriteheart.png')}}" /></a>
             <div style="width: 24.98px; height: 22.71px; left: 1.14px; top: 1.14px; position: absolute; border: 1.50px #396874 solid"></div>
         </div>
     </div>
@@ -119,8 +150,11 @@
         <div style="width: 214.57px; height: 18.73px; left: 0px; top: 260.55px; position: absolute; color: black; font-size: 8px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">1/23 Ashwell Street, Saint Heliers</div>
         <div style="width: 80.04px; height: 18.73px; left: 263.96px; top: 260.55px; position: absolute; text-align: right; color: black; font-size: 8px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">30 Mar 2024</div>
         <a href="/detail"><img style="width: 344px; height: 209.47px; left: 0px; top: 0px; position: absolute" src="{{url_for ('static', filename='property.png')}}" /></a>
-        <a href="/detail"><img style="width: 86.85px; height: 20.44px; left: 257.15px; top: 229.90px; position: absolute" src="https://via.placeholder.com/87x20" /></a>
+        <a href="/detail"><img style="width: 86.85px; height: 20.44px; left: 257.15px; top: 229.90px; position: absolute" src="{{url_for ('static', filename='occupants.png')}}" /></a>
+
+        <!--Favorite Icon-->
         <div style="width: 27.25px; height: 27.25px; left: 308.24px; top: 5.11px; position: absolute">
+            <a href="/detail"><img style="width: 24.98px; height: 22.71px; left: 1.14px; top: 1.14px; position: absolute; border: 1.50px #396874 solid" src="{{url_for ('static', filename='favoriteheart.png')}}" /></a>
             <div style="width: 24.98px; height: 22.71px; left: 1.14px; top: 1.14px; position: absolute; border: 1.50px #396874 solid"></div>
         </div>
     </div>
@@ -129,9 +163,14 @@
         <div style="width: 240.12px; height: 25.54px; left: 0px; top: 224.79px; position: absolute; color: black; font-size: 11px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">To be sold by auction on...</div>
         <div style="width: 214.57px; height: 18.73px; left: 0px; top: 260.55px; position: absolute; color: black; font-size: 8px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">1/23 Ashwell Street, Saint Heliers</div>
         <div style="width: 80.04px; height: 18.73px; left: 263.96px; top: 260.55px; position: absolute; text-align: right; color: black; font-size: 8px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">30 Mar 2024</div>
+        
+        <!--Navigating to the Details Page-->
         <a href="/detail"><img style="width: 344px; height: 209.47px; left: 0px; top: 0px; position: absolute" src="{{url_for ('static', filename='property.png')}}" /></a>
-        <a href="/detail"><img style="width: 86.85px; height: 20.44px; left: 257.15px; top: 229.90px; position: absolute" src="https://via.placeholder.com/87x20" /></a>
+        <a href="/detail "><img style="width: 86.85px; height: 20.44px; left: 257.15px; top: 229.90px; position: absolute" src="{{url_for ('static', filename='occupants.png')}}" /></a>
+        
+        <!--Favorite Icon-->
         <div style="width: 27.25px; height: 27.25px; left: 308.24px; top: 5.11px; position: absolute">
+            <a href="/detail"><img style="width: 24.98px; height: 22.71px; left: 1.14px; top: 1.14px; position: absolute; border: 1.50px #396874 solid" src="{{url_for ('static', filename='favoriteheart.png')}}" /></a>
             <div style="width: 24.98px; height: 22.71px; left: 1.14px; top: 1.14px; position: absolute; border: 1.50px #396874 solid"></div>
         </div>
     </div>
