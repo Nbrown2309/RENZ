@@ -38,5 +38,6 @@ def detail():
 def login_and_signup():
     return render_template('login_and_signup.html')
 
+
 if __name__ == '__main__':
     app.run(debug=True)

@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css"
     href="{{ url_for('static', filename='style.css') }}">
 </head>
-<div style="width: 100%; height: 100%; position: relative; background: white">
+<div style="width: 100%; height: 100%; position: relative;">
     <div style="width: 943px; height: 143px; left: 385px; top: 477px; position: absolute; box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.10); border-radius: 15px; border: 1px #5495A5 solid"></div>
     <div style="width: 626px; height: 33px; left: 420px; top: 540px; position: absolute; border-radius: 5px; border: 1px #5495A5 solid"></div>
     <div style="width: 114px; height: 33px; left: 1066px; top: 540px; position: absolute; border-radius: 5px; border: 1px #5495A5 solid"></div>
@@ -42,7 +42,7 @@
     <a href="/favorite" style="text-decoration: none;">
         <div style="left: 1433px; top: 18px; position: absolute; color: #5495A5; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Favorite<br/></div>
     </a>
-    <a href="/my-home" style="text-decoration: none;">
+    <a href="/myhome" style="text-decoration: none;">
         <div style="left: 1528px; top: 18px; position: absolute; color: #5495A5; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">My Home</div>
     </a>
     <a href="/login_and_signup" style="text-decoration: none;">
@@ -51,6 +51,7 @@
     <div style="width: 711px; height: 33px; left: 484px; top: 378px; position: absolute; text-align: center; color: black; font-size: 36px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">The Home of property</div>
     <div style="left: 1531px; top: 798px; position: absolute; color: black; font-size: 12px; font-family: Inter; font-weight: 400; word-wrap: break-word">Ad<br/>Banner</div>
     <div style="left: 385px; top: 646px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">Recent searches</div>
+    
     <div style="width: 202px; height: 111px; left: 632px; top: 662px; position: absolute">
     <div style="width: 202px; height: 111px; left: 0px; top: 0px; position: absolute; box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.10); border-radius: 5px; border: 1px #5495A5 solid"></div>
     <div style="width: 16px; height: 16px; left: 12px; top: 85px; position: absolute">
@@ -71,22 +72,10 @@
     <div style="width: 943px; height: 0px; left: 385px; top: 1848px; position: absolute; border: 1px #5495A5 solid"></div>
     <div style="width: 943px; height: 0px; left: 385px; top: 2102px; position: absolute; border: 1px #5495A5 solid"></div>
     <div style="width: 943px; height: 0px; left: 385px; top: 2166px; position: absolute; border: 1px #5495A5 solid"></div>
-    <div style="width: 24px; height: 24px; left: 347px; top: 908px; position: absolute">
-    <div style="width: 14px; height: 0px; left: 7px; top: 12px; position: absolute; border: 2px #5495A5 solid"></div>
-    <div style="width: 7px; height: 10px; left: 2px; top: 7px; position: absolute; background: #5495A5"></div>
-    </div>
-    <div style="width: 24px; height: 24px; left: 1348px; top: 908px; position: absolute">
-    <div style="width: 14px; height: 0px; left: 17px; top: 12px; position: absolute; transform: rotate(180deg); transform-origin: 0 0; border: 2px #5495A5 solid"></div>
-    <div style="width: 7px; height: 10px; left: 22px; top: 7px; position: absolute; transform: rotate(180deg); transform-origin: 0 0; background: #5495A5"></div>
-    </div>
-    <div style="width: 24px; height: 24px; left: 347px; top: 1156px; position: absolute">
-    <div style="width: 14px; height: 0px; left: 7px; top: 12px; position: absolute; border: 2px #5495A5 solid"></div>
-    <div style="width: 7px; height: 10px; left: 2px; top: 7px; position: absolute; background: #5495A5"></div>
-    </div>
-    <div style="width: 24px; height: 24px; left: 1348px; top: 1156px; position: absolute">
-    <div style="width: 14px; height: 0px; left: 17px; top: 12px; position: absolute; transform: rotate(180deg); transform-origin: 0 0; border: 2px #5495A5 solid"></div>
-    <div style="width: 7px; height: 10px; left: 22px; top: 7px; position: absolute; transform: rotate(180deg); transform-origin: 0 0; background: #5495A5"></div>
-    </div>
+    <div style="width: 24px; height: 24px; left: 347px; top: 908px; position: absolute"></div>
+
+    
+
     <div style="left: 385px; top: 1338px; position: absolute; color: black; font-size: 16px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">Need some inspiration?</div>
     <div style="left: 385px; top: 1622px; position: absolute; color: #3B6974; font-size: 14px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Bedrooms inspiration</div>
     <div style="left: 632px; top: 1622px; position: absolute; color: #3B6974; font-size: 14px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Kitchens inspiration</div>
@@ -98,10 +87,7 @@
     <div style="width: 14px; height: 0px; left: 7px; top: 12px; position: absolute; border: 2px #5495A5 solid"></div>
     <div style="width: 7px; height: 10px; left: 2px; top: 7px; position: absolute; background: #5495A5"></div>
     </div>
-    <div style="width: 24px; height: 24px; left: 1348px; top: 1480px; position: absolute">
-    <div style="width: 14px; height: 0px; left: 17px; top: 12px; position: absolute; transform: rotate(180deg); transform-origin: 0 0; border: 2px #5495A5 solid"></div>
-    <div style="width: 7px; height: 10px; left: 22px; top: 7px; position: absolute; transform: rotate(180deg); transform-origin: 0 0; background: #5495A5"></div>
-    </div>
+
     <div style="left: 385px; top: 2125px; position: absolute">
     <div style="left: 0px; top: 0px; position: absolute; color: #3B6974; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Our partners</div>
     <div style="left: 149px; top: 2px; position: absolute; color: #5495A5; font-size: 11px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Trade Me Property</div>
@@ -151,14 +137,12 @@
     <div style="width: 20px; height: 0px; left: 0px; top: 8px; position: absolute; border: 1px #5495A5 solid"></div>
     <div style="width: 3px; height: 5px; left: 3px; top: 5px; position: absolute; background: #5495A5; border-radius: 9999px"></div>
     </div>
+    
     <div style="width: 24px; height: 24px; left: 1214px; top: 545px; position: absolute">
     <div style="width: 12px; height: 12px; left: 5px; top: 5px; position: absolute; border-radius: 9999px; border: 1px #5495A5 solid"></div>
     <div style="width: 3px; height: 3px; left: 17px; top: 17px; position: absolute; border: 1px #5495A5 solid"></div>
     </div>
-    <div style="width: 24px; height: 24px; left: 428px; top: 545px; position: absolute">
-    <div style="width: 12px; height: 12px; left: 5px; top: 5px; position: absolute; border-radius: 9999px; border: 1px rgba(84, 149, 165, 0.30) solid"></div>
-    <div style="width: 3px; height: 3px; left: 17px; top: 17px; position: absolute; border: 1px rgba(84, 149, 165, 0.30) solid"></div>
-    </div>
+  
     <img style="width: 741px; height: 115px; left: 470px; top: 1700px; position: absolute" src="{{url_for('static', filename='addbanner2.png')}}" />
     <div style="width: 16px; height: 16px; left: 1412px; top: 19px; position: absolute">
     <div style="width: 14.67px; height: 13.33px; left: 0.67px; top: 0.67px; position: absolute; border: 1.50px #396874 solid"></div>
