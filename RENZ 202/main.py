@@ -14,6 +14,10 @@ def search():
 def findagent():
     return render_template('findagent.html')
 
+@app.route('/agentsearch')
+def agentsearch():
+    return render_template('agentsearch.html')
+
 @app.route('/homeinspiration')
 def homeinspiration():
     return render_template('homeinspiration.html')
