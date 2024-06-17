@@ -1,6 +1,100 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <title>My Home</title>
+    </head>
     <body>
-        <h1>This is the My Home Page!!</h1>
+        <!--Same Navigation Bar used for the other pages-->
+        <div style="width: 100%; height: 100%; position: relative; background: white">
+            <a href="/search" style="text-decoration: none;">
+                <div style="left: 210px; top: 18px; position: absolute; color: #5495A5; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Residential</div>
+            </a>
+            <a href="/search" style="text-decoration: none;">
+                <div style="left: 326px; top: 18px; position: absolute; color: #5495A5; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">New Build</div>
+            </a>
+            <a href="/search" style="text-decoration: none;">
+                <div style="left: 435px; top: 18px; position: absolute; color: #5495A5; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Rural</div>
+            </a>
+            <a href="/search" style="text-decoration: none;">
+                <div style="left: 513px; top: 18px; position: absolute; color: #5495A5; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Commercial</div>
+            </a>
+            <a href="/search" style="text-decoration: none;">
+                <div style="left: 634px; top: 18px; position: absolute; color: #5495A5; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Business</div>
+            </a>
+            <a href="/search" style="text-decoration: none;">
+                <div style="left: 734px; top: 18px; position: absolute; color: #5495A5; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">House Price</div>
+            </a>
+            <a href="/findagent" style="text-decoration: none;">
+                <div style="left: 854px; top: 18px; position: absolute; color: #5495A5; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Find Agent</div>
+            </a>
+            <a href="/homeinspiration" style="text-decoration: none;">
+                <div style="left: 968px; top: 18px; position: absolute; color: #5495A5; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Home Inspiration</div>
+            </a>
+            <a href="/news" style="text-decoration: none;">
+                <div style="left: 1122px; top: 18px; position: absolute; color: #5495A5; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">News</div>
+            </a>
+            <a href="/favorite" style="text-decoration: none;">
+                <div style="left: 1433px; top: 18px; position: absolute; color: #5495A5; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Favorite<br/></div>
+            </a>
+            <a href="/myhome" style="text-decoration: none;">
+                <div style="left: 1528px; top: 18px; position: absolute; color: #5495A5; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">My Home</div>
+            </a>
+            <a href="/login_and_signup" style="text-decoration: none;">
+                <div style="left: 1611px; top: 18px; position: absolute; color: #5495A5; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Log in / Sign up</div>
+            </a>
+        <!--Adding Our logo to the navigation bar-->
+            <img style="width: 100px; height: 40px; left: 11px; top: 6px; position: absolute" src="{{ url_for('static', filename='renzlogo.png') }}" />
+        </div>
+
+        <div style="width: 100%; height: 100%; position: relative; background: white">
+            <div style="width: 260px; height: 36px; left: 345px; top: 709px; position: absolute; background: #0D9AFF"></div>
+            <div style="width: 24px; height: 24px; left: 433px; top: 717px; position: absolute">
+            <div style="width: 18px; height: 18px; left: 21px; top: 3px; position: absolute"></div>
+            <div style="width: 15px; height: 11px; left: 3px; top: 10px; position: absolute" src="{{url_for('static', filename='photo.png')}}"></div>
+            </div>
+
+            <a href="/mappopup" style="text-decoration: none;">
+            <img style="width: 355px; height: 237px; left: 1030px; top: 772px; position: absolute" src="{{url_for ('static', filename='detailmap.png')}}" />
+            </a>
+            
+
+            <div style="left: 346px; top: 821px; position: absolute; color: black; font-size: 32px; font-family: Nunito Sans; font-weight: 800; word-wrap: break-word">5/867 New North Road, <br/>Mount Albert, Auckland City</div>
+            <div style="left: 345px; top: 915px; position: absolute; color: black; font-size: 20px; font-family: Nunito Sans; font-weight: 400; word-wrap: break-word">Perfect Family Starter or Investor's Dream!</div>
+
+            <!--Photo and Video pop ups-->
+            
+            <div style="left: 463px; top: 720px; position: absolute; color: white; font-size: 14px; font-family: Nunito Sans; font-weight: 800; word-wrap: break-word">Photos</div>
+
+            <a href="/video" style="text-decoration: none;">
+            <div style="left: 725px; top: 720px; position: absolute; color: #5495A5; font-size: 14px; font-family: Nunito Sans; font-weight: 800; word-wrap: break-word">Videos</div>
+            </a>
+
+            <a href="/floorplan" style="text-decoration: none;">
+            <div style="left: 972px; top: 720px; position: absolute; color: #5495A5; font-size: 14px; font-family: Nunito Sans; font-weight: 800; word-wrap: break-word">Floorplan</div>
+            </a>
+
+            <a href="/solarpopup" style="text-decoration: none;">
+            <div style="left: 1240px; top: 720px; position: absolute; color: #5495A5; font-size: 14px; font-family: Nunito Sans; font-weight: 800; word-wrap: break-word">Solar</div>
+            </a>
+
+           
+            <div style="width: 592px; height: 382px; left: 349px; top: 1065px; position: absolute"><span style="color: black; font-size: 16px; font-family: Nunito Sans; font-weight: 400; word-wrap: break-word">Property details<br/>Listing # HME2992 | Listed on 21 March<br/>In-zone for highly sought after Gladstone Primary and Mt Albert Grammar School (MAGS), this sunny home is the perfect step into the bustling and ever popular Mt Albert!<br/></span><span style="color: black; font-size: 16px; font-family: Nunito Sans; font-weight: 400; word-wrap: break-word">Only 10 minutes' walk to Gladstone Primary School; 15 minutes' walk to Mt Albert Grammar School (MAGS)<br/>Excellent Cycling Network to the City!<br/>Renovated home with new kitchen, newly painted inside and out.<br/>Roof was replaced in September 2022<br/>Open plan living/dining - Excellent indoor-outdoor flow<br/>Internal access high studded garage. 3 more off street parkings by the property.<br/></span><span style="color: black; font-size: 16px; font-family: Nunito Sans; font-weight: 400; word-wrap: break-word">Private enclave in a super central location just behind the Mt albert shops. Only steps to Mt Albert Train station, local shops and restaurants. Steps away from Gladstone Primary. Minutes to Mt Albert Grammar School (MAGS), motorway and St Lukes Shopping Centre.<br/>Easy access to motorway, supermarkets, Unitec campus, St Lukes and other exceptional community facilities including parks, aquatic centre and much more. Seize this opportunity to get a piece of this beautiful leafy suburb!<br/>We are always happy to work with other agents and welcome conjunctional sales, so AGENTS, bring your buyers!<br/>Don't miss this golden opportunity!</span></div>
+            <img style="width: 649px; height: 276px; left: 340px; top: 1594px; position: absolute" src="{{url_for('static', filename='detail_img.png')}}" />
+            <img style="width: 1096px; height: 679px; left: 331px; top: 1862px; position: absolute" src="{{url_for('static', filename='detail_income.png')}}" />
+            <img style="width: 361px; height: 768px; left: 1027px; top: 1030px; position: absolute" src="{{url_for ('static', filename='callagent.png')}}" />
+            <img style="width: 187px; height: 600px; left: 1472px; top: 477px; position: absolute" src="{{url_for('static', filename='addbanner.png')}}" />
+            <img style="width: 1040px; height: 470px; left: 345px; top: 122px; position: absolute" src="{{url_for('static', filename='largeproperty.png')}}" />
+            
+            
+            <div style="width: 1038px; height: 103.90px; left: 346px; top: 598px; position: absolute">
+            <img style="width: 160px; height: 103.90px; left: 0px; top: 0px; position: absolute" src="{{url_for('static', filename='property.png')}}" />
+            <img style="width: 160px; height: 103.90px; left: 174px; top: 0px; position: absolute" src="{{url_for('static', filename='property.png')}}" />
+            <img style="width: 160px; height: 103.90px; left: 349px; top: 0px; position: absolute" src="{{url_for('static', filename='property.png')}}" />
+            <img style="width: 160px; height: 103.90px; left: 524px; top: 0px; position: absolute" src="{{url_for('static', filename='property.png')}}" />
+            <img style="width: 160px; height: 103.90px; left: 701px; top: 0px; position: absolute" src="{{url_for('static', filename='property.png')}}" />
+            <img style="width: 160px; height: 103.90px; left: 878px; top: 0px; position: absolute" src="{{url_for('static', filename='property.png')}}" />
+            </div>
+        </div>
+
     </body>
 </html>

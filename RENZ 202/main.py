@@ -1,6 +1,7 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for, session
 
 app = Flask(__name__)
+app.secret_key = 'renz'
 
 @app.route('/')
 def index():
@@ -38,6 +39,21 @@ def detail():
 def login_and_signup():
     return render_template('login_and_signup.html')
 
+@app.route('/mappopup')
+def mappopup():
+    return render_template('mappopup.html')
+
+@app.route('/video')
+def video():
+    return render_template('video.html')
+
+@app.route('/floorplan')
+def floorplan():
+    return render_template('floorplan.html')
+
+@app.route('/solarpopup')
+def solarpopup():
+    return render_template('solarpopup.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

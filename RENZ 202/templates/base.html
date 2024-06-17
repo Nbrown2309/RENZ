@@ -1,17 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Main Page</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}RENZ{% endblock %}</title>
     <link rel="stylesheet" type="text/css"
     href="{{ url_for('static', filename='style.css') }}">
 </head>
+
+<body>
+
+<!--This is the main Serach bar Functionalities-->
+<!--Used for buy,rent, valuation, search and filter-->    
 <div style="width: 100%; height: 100%; position: relative;">
     <div style="width: 943px; height: 143px; left: 385px; top: 477px; position: absolute; box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.10); border-radius: 15px; border: 1px #5495A5 solid"></div>
-    <div style="width: 626px; height: 33px; left: 420px; top: 540px; position: absolute; border-radius: 5px; border: 1px #5495A5 solid"></div>
-    <div style="width: 114px; height: 33px; left: 1066px; top: 540px; position: absolute; border-radius: 5px; border: 1px #5495A5 solid"></div>
-    <div style="width: 114px; height: 33px; left: 1200px; top: 540px; position: absolute; border-radius: 5px; border: 1px #5495A5 solid"></div>
+<div style="width: 626px; height: 33px; left: 420px; top: 540px; position: absolute; border-radius: 5px; border: 1px #5495A5 solid">
+  <a href="/search" style="display: inline-block; width: 200px; height: 100%; line-height: 33px; text-align: center; color: #5495A5; text-decoration: none;">Buy</a>
+  <a href="/search" style="display: inline-block; width: 200px; height: 100%; line-height: 33px; text-align: center; color: #5495A5; text-decoration: none;">Rent</a>
+  <a href="/search" style="display: inline-block; width: 200px; height: 100%; line-height: 33px; text-align: center; color: #5495A5; text-decoration: none;">Valuation</a>
+</div>
+
+<div style="width: 114px; height: 33px; left: 1066px; top: 540px; position: absolute; border-radius: 5px; border: 1px #5495A5 solid">
+  <a href="/search" style="display: block; width: 100%; height: 100%; line-height: 33px; text-align: center; color: #5495A5; text-decoration: none;">Filter</a>
+</div>
+
+<div style="width: 114px; height: 33px; left: 1200px; top: 540px; position: absolute; border-radius: 5px; border: 1px #5495A5 solid">
+  <a href="/search" style="display: block; width: 100%; height: 100%; line-height: 33px; text-align: center; color: #5495A5; text-decoration: none;">Search</a>
+</div>
+
     <a href="/" style="text-decoration: none;">
         <div style="left: 210px; top: 18px; position: absolute; color: #5495A5; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Residential</div>
     </a>
@@ -50,20 +67,25 @@
         
     <div style="width: 711px; height: 33px; left: 484px; top: 378px; position: absolute; text-align: center; color: black; font-size: 36px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">The Home of property</div>
     <div style="left: 1531px; top: 798px; position: absolute; color: black; font-size: 12px; font-family: Inter; font-weight: 400; word-wrap: break-word">Ad<br/>Banner</div>
-    <div style="left: 385px; top: 646px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">Recent searches</div>
-    
+    <div style="left: 385px; top: 646px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 600; word-wrap: break-word">Recent searches</div>
+
+    <!--Location Box Sales-->
+    <!--More Of the Recent Search Box Sale code can be displayed-->
+    <!--Further Down the code-->
     <div style="width: 202px; height: 111px; left: 632px; top: 662px; position: absolute">
-    <div style="width: 202px; height: 111px; left: 0px; top: 0px; position: absolute; box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.10); border-radius: 5px; border: 1px #5495A5 solid"></div>
-    <div style="width: 16px; height: 16px; left: 12px; top: 85px; position: absolute">
-    <div style="width: 14.67px; height: 13.33px; left: 0.67px; top: 0.67px; position: absolute; border: 1.50px #396874 solid"></div>
+        <div style="width: 202px; height: 111px; left: 0px; top: 0px; position: absolute; box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.10); border-radius: 5px; border: 1px #5495A5 solid"></div>
+        <div style="width: 16px; height: 16px; left: 12px; top: 85px; position: absolute">
+        <img style="width: 14.67px; height: 13.33px; left: 0.67px; top: 0.67px; position: absolute" src="{{url_for ('static', filename='blueheart.png')}}">
     </div>
-    <div style="left: 12px; top: 9px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">Karaka</div>
-    <div style="left: 12px; top: 34px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">Residentioal - Sale</div>
-    <div style="width: 24px; height: 24px; left: 169px; top: 81px; position: absolute">
-    <div style="width: 16px; height: 13px; left: 20px; top: 18px; position: absolute; transform: rotate(-180deg); transform-origin: 0 0; border: 2px #41707B solid"></div>
+    
+    <a href="/detail" style="text-decoration: none;">
+    <div style="left: 12px; top: 9px; position: absolute; color: #00CFFF; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">Karaka</div>
+    <div style="left: 12px; top: 34px; position: absolute; color: #00CFFF; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">Residentioal - Sale</div>
+    </a>
     </div>
     </div>
 
+    
 
     <div style="left: 385px; top: 814px; position: absolute; color: black; font-size: 16px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">For Sale</div>
     <div style="left: 385px; top: 1072px; position: absolute; color: black; font-size: 16px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">For Rent</div>
@@ -84,16 +106,12 @@
     <div style="left: 397px; top: 1369px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">Address</div>
     <div style="width: 943px; height: 0px; left: 385px; top: 1305px; position: absolute; border: 1px #5495A5 solid"></div>
     <div style="width: 24px; height: 24px; left: 347px; top: 1480px; position: absolute">
-    <div style="width: 14px; height: 0px; left: 7px; top: 12px; position: absolute; border: 2px #5495A5 solid"></div>
-    <div style="width: 7px; height: 10px; left: 2px; top: 7px; position: absolute; background: #5495A5"></div>
-    </div>
-
-    <div style="left: 385px; top: 2125px; position: absolute">
-    <div style="left: 0px; top: 0px; position: absolute; color: #3B6974; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Our partners</div>
-    <div style="left: 149px; top: 2px; position: absolute; color: #5495A5; font-size: 11px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Trade Me Property</div>
+    
     </div>
 
 
+    <a href="/search" style="text-decoration: none;">
+    <!--North Island Listings-->
     <div style="width: 942px; height: 208px; left: 385px; top: 1871px; position: absolute">
     <div style="left: 0px; top: 0px; position: absolute; color: #3B6974; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">North Island listings</div>
     <div style="left: 0px; top: 41px; position: absolute; color: #5495A5; font-size: 11px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Auckland</div>
@@ -101,6 +119,8 @@
     <div style="left: 0px; top: 117px; position: absolute; color: #5495A5; font-size: 11px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Tauranga</div>
     <div style="left: 0px; top: 155px; position: absolute; color: #5495A5; font-size: 11px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Taupo</div>
     <div style="left: 0px; top: 193px; position: absolute; color: #5495A5; font-size: 11px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Wellington</div>
+
+    <!--South Island Listings-->
     <div style="left: 280px; top: 0px; position: absolute; color: #3B6974; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">South Island listings</div>
     <div style="left: 280px; top: 41px; position: absolute; color: #5495A5; font-size: 11px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Nelson</div>
     <div style="left: 280px; top: 79px; position: absolute; color: #5495A5; font-size: 11px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Blenheim</div>
@@ -112,6 +132,8 @@
     <div style="left: 824px; top: 117px; position: absolute; color: #5495A5; font-size: 11px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Christchurch</div>
     <div style="left: 824px; top: 155px; position: absolute; color: #5495A5; font-size: 11px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Wanaka</div>
     <div style="left: 824px; top: 193px; position: absolute; color: #5495A5; font-size: 11px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Queenstown</div>
+
+    <!--North Island Listings-->
     <div style="left: 559px; top: 0px; position: absolute; color: #3B6974; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">North Island sales</div>
     <div style="left: 560px; top: 41px; position: absolute; color: #5495A5; font-size: 11px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Auckland</div>
     <div style="left: 560px; top: 79px; position: absolute; color: #5495A5; font-size: 11px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Hamilton</div>
@@ -119,29 +141,14 @@
     <div style="left: 560px; top: 155px; position: absolute; color: #5495A5; font-size: 11px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Taupo</div>
     <div style="left: 560px; top: 193px; position: absolute; color: #5495A5; font-size: 11px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Wellington</div>
     <div style="left: 824px; top: 0px; position: absolute; color: #3B6974; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">North Island sales</div>
+    </a>
     </div>
 
-
-    `   
     <img style="width: 110px; height: 40px; left: 20px; top: 6px; position: absolute" src= "{{url_for ('static', filename='renzlogo.png')}}" />
-    <div style="width: 1728px; height: 0px; left: 0px; top: 51px; position: absolute; border: 1px #5495A5 solid"></div>
-    <div style="width: 943px; height: 0px; left: 385px; top: 515px; position: absolute; border: 1px #5495A5 solid"></div>
-    <div style="width: 187px; height: 0px; left: 423px; top: 514px; position: absolute; border: 3px #437885 solid"></div>
     <img style="width: 1728px; height: 250px; left: 0px; top: 51px; position: absolute" src="{{url_for('static', filename='renzhouse.png')}}" />
     <img style="width: 187px; height: 600px; left: 1472px; top: 477px; position: absolute" src="{{url_for('static', filename='addbanner.png')}}" />
-    <div style="width: 21px; height: 15px; left: 1083px; top: 551px; position: absolute">
-    <div style="width: 20px; height: 0px; left: 0px; top: 2.50px; position: absolute; border: 1px #5495A5 solid"></div>
-    <div style="width: 3px; height: 5px; left: 14px; top: 0px; position: absolute; background: #5495A5; border-radius: 9999px"></div>
-    <div style="width: 21px; height: 0px; left: 0px; top: 13px; position: absolute; border: 1px #5495A5 solid"></div>
-    <div style="width: 3px; height: 5px; left: 11px; top: 10px; position: absolute; background: #5495A5; border-radius: 9999px"></div>
-    <div style="width: 20px; height: 0px; left: 0px; top: 8px; position: absolute; border: 1px #5495A5 solid"></div>
-    <div style="width: 3px; height: 5px; left: 3px; top: 5px; position: absolute; background: #5495A5; border-radius: 9999px"></div>
     </div>
     
-    <div style="width: 24px; height: 24px; left: 1214px; top: 545px; position: absolute">
-    <div style="width: 12px; height: 12px; left: 5px; top: 5px; position: absolute; border-radius: 9999px; border: 1px #5495A5 solid"></div>
-    <div style="width: 3px; height: 3px; left: 17px; top: 17px; position: absolute; border: 1px #5495A5 solid"></div>
-    </div>
   
     <img style="width: 741px; height: 115px; left: 470px; top: 1700px; position: absolute" src="{{url_for('static', filename='addbanner2.png')}}" />
     <div style="width: 16px; height: 16px; left: 1412px; top: 19px; position: absolute">
@@ -153,24 +160,26 @@
     </div>
     <div style="width: 4px; height: 5.33px; left: 6px; top: 9.33px; position: absolute; border-radius: 1px; border: 1.50px #396874 solid"></div>
     </div>
+
+    <!--For Sale Property Photo's-->
     <div style="width: 202px; height: 164px; left: 632px; top: 841px; position: absolute">
     <div style="left: 0px; top: 132px; position: absolute; color: black; font-size: 11px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">To be sold by auction on...</div>
     <div style="left: 0px; top: 153px; position: absolute; color: black; font-size: 8px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">1/23 Ashwell Street, Saint Heliers</div>
     <div style="left: 155px; top: 153px; position: absolute; text-align: right; color: black; font-size: 8px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">30 Mar 2024</div>
     <img style="width: 202px; height: 123px; left: 0px; top: 0px; position: absolute" src="{{url_for('static', filename='property.png')}}" />
-    <img style="width: 51px; height: 12px; left: 151px; top: 135px; position: absolute" src="https://via.placeholder.com/51x12" />
+    <img style="width: 51px; height: 12px; left: 151px; top: 135px; position: absolute" src="{{url_for('static', filename='occupants.png')}}" />
     <div style="width: 16px; height: 16px; left: 181px; top: 3px; position: absolute">
     <div style="width: 14.67px; height: 13.33px; left: 0.67px; top: 0.67px; position: absolute; background: #FF5656; box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.10) inset"></div>
     </div>
     </div>
 
     <div style="width: 100%; height: 100%; position: relative; background: white">
-        <!-- Add other links here -->
     
-        <!-- Property Divs -->
+        <!-- For Sale Property Divs -->
         <div style="width: 202px; height: 164px; left: 385px; top: 841px; position: absolute">
             <a href="/detail">
                 <img style="width: 202px; height: 123px; left: 0px; top: 0px; position: absolute" src="{{url_for('static', filename='property.png')}}" />
+                <img style="width: 51px; height: 12px; left: 151px; top: 135px; position: absolute" src="{{url_for('static', filename='occupants.png')}}" />
             </a>
             <div style="left: 0px; top: 132px; position: absolute; color: black; font-size: 11px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">To be sold by auction on...</div>
             <div style="left: 0px; top: 153px; position: absolute; color: black; font-size: 8px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">1/23 Ashwell Street, Saint Heliers</div>
@@ -180,6 +189,7 @@
         <div style="width: 202px; height: 164px; left: 1126px; top: 841px; position: absolute">
             <a href="/detail">
                 <img style="width: 202px; height: 123px; left: 0px; top: 0px; position: absolute" src="{{url_for('static', filename='property.png')}}" />
+                <img style="width: 51px; height: 12px; left: 151px; top: 135px; position: absolute" src="{{url_for('static', filename='occupants.png')}}" />
             </a>
             <div style="left: 0px; top: 132px; position: absolute; color: black; font-size: 11px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">To be sold by auction on...</div>
             <div style="left: 0px; top: 153px; position: absolute; color: black; font-size: 8px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">1/23 Ashwell Street, Saint Heliers</div>
@@ -189,6 +199,7 @@
         <div style="width: 202px; height: 164px; left: 879px; top: 841px; position: absolute">
             <a href="/detail">
                 <img style="width: 202px; height: 123px; left: 0px; top: 0px; position: absolute" src="{{url_for('static', filename='property.png')}}" />
+                <img style="width: 51px; height: 12px; left: 151px; top: 135px; position: absolute" src="{{url_for('static', filename='occupants.png')}}" />
             </a>
             <div style="left: 0px; top: 132px; position: absolute; color: black; font-size: 11px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">To be sold by auction on...</div>
             <div style="left: 0px; top: 153px; position: absolute; color: black; font-size: 8px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">1/23 Ashwell Street, Saint Heliers</div>
@@ -198,6 +209,7 @@
         <div style="width: 202px; height: 164px; left: 632px; top: 1098px; position: absolute">
             <a href="/detail">
                 <img style="width: 202px; height: 123px; left: 0px; top: 0px; position: absolute" src="{{url_for('static', filename='property.png')}}" />
+                <img style="width: 51px; height: 12px; left: 151px; top: 135px; position: absolute" src="{{url_for('static', filename='occupants.png')}}" />
             </a>
             <div style="left: 0px; top: 132px; position: absolute; color: black; font-size: 11px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">To be sold by auction on...</div>
             <div style="left: 0px; top: 153px; position: absolute; color: black; font-size: 8px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">1/23 Ashwell Street, Saint Heliers</div>
@@ -205,43 +217,57 @@
         </div>
     </div>
 
-    <div style="width: 942px; height: 31px; left: 385px; top: 2182px; position: absolute">
-        <div style="left: 0px; top: 7px; position: absolute; color: #3B6974; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">About</div>
-        <div style="left: 99px; top: 7px; position: absolute; color: #3B6974; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Careers</div>
-        <div style="left: 208px; top: 7px; position: absolute; color: #3B6974; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Contact</div>
-        <div style="left: 307px; top: 7px; position: absolute; color: #3B6974; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Help</div>
-        <div style="left: 396px; top: 7px; position: absolute; color: #3B6974; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Terms</div>
-        <div style="left: 495px; top: 7px; position: absolute; color: #3B6974; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Privacy</div>
-        <div style="width: 31px; height: 31px; left: 779px; top: 0px; position: absolute">
-        <div style="width: 31px; height: 30.89px; left: 0px; top: 0px; position: absolute; background: #0866FF"></div>
-        <div style="width: 14.13px; height: 25.26px; left: 8.56px; top: 5.74px; position: absolute; background: white"></div>
-        </div>
-        <div style="width: 31px; height: 31px; left: 911px; top: 0px; position: absolute">
-        <div style="width: 28.42px; height: 25.69px; left: 1.29px; top: 2.46px; position: absolute; background: black"></div>
-        </div>
-        <div style="width: 31px; height: 31px; left: 823px; top: 0px; position: absolute">
-        <div style="width: 30.98px; height: 30.99px; left: 0px; top: 0px; position: absolute; background: #000100"></div>
-        <div style="width: 15.92px; height: 15.92px; left: 7.54px; top: 7.54px; position: absolute; background: #000100"></div>
-        <div style="width: 3.72px; height: 3.72px; left: 21.92px; top: 5.36px; position: absolute; background: #000100"></div>
-        </div>
-        <div style="width: 31px; height: 31px; left: 867px; top: 0px; position: absolute">
-        <div style="width: 31px; height: 31px; left: -0px; top: -0px; position: absolute; background: #0A66C2"></div>
-        </div>
-        </div>
-        <img style="width: 200px; height: 250px; left: 385px; top: 1367px; position: absolute" src="{{url_for ('static', filename='bedroom4.png')}}" />
+
+        <!--Bottom Display of photo's which navigate you to the Home inspiration Page-->
+        <a href="/homeinspiration" style="text-decoration: none;">
+        <img style="width: 200px; height: 250px; left: 385px; top: 1367px; position: absolute" src="{{url_for ('static', filename='bedroom4.png')}}">
+        </a>
+
+        <a href="/homeinspiration" style="text-decoration: none;">
         <img style="width: 200px; height: 250px; left: 630px; top: 1367px; position: absolute" src="{{url_for('static', filename='kitchen.png')}}" />
+        </a>
+
+        <a href="/homeinspiration" style="text-decoration: none;">
         <img style="width: 200px; height: 250px; left: 880px; top: 1367px; position: absolute" src="{{url_for ('static', filename='lounge2.png')}}" />
+        </a>
+
         <img style="width: 200px; height: 250px; left: 1127px; top: 1367px; position: absolute" src="{{url_for('static', filename='studyroom.png')}}" />
+
+        <!--Adding in the Other Top Sale Box's-->
+
+        <a href="/detail" style="text-decoration: none;">
         <div style="width: 202px; height: 111px; left: 385px; top: 662px; position: absolute">
         <div style="width: 202px; height: 111px; left: 0px; top: 0px; position: absolute; box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.10); border-radius: 5px; border: 1px #5495A5 solid"></div>
-        <div style="left: 12px; top: 9px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">Auckland</div>
-        <div style="left: 12px; top: 34px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">Residentioal - Sale</div>
+        <div style="left: 12px; top: 9px; position: absolute; color: #00CFFF; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">Auckland</div>
+        <div style="left: 12px; top: 34px; position: absolute; color: #00CFFF; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">Residentioal - Sale</div>
         <div style="width: 24px; height: 24px; left: 169px; top: 81px; position: absolute">
-        <div style="width: 16px; height: 13px; left: 20px; top: 18px; position: absolute; transform: rotate(-180deg); transform-origin: 0 0; border: 2px #41707B solid"></div>
         </div>
         <div style="width: 16px; height: 16px; left: 12px; top: 85px; position: absolute">
-        <div style="width: 14.67px; height: 13.33px; left: 0.67px; top: 0.67px; position: absolute; border: 1.50px #396874 solid"></div>
+        <img style="width: 14.67px; height: 13.33px; left: 0.67px; top: 0.67px; position: absolute" src="{{url_for ('static', filename='blueheart.png')}}">
         </div>
         </div>
+        </a>
 
+        <a href="/detail" style="text-decoration: none;">
+        <div style="width: 202px; height: 111px; left: 882px; top: 662px; position: absolute">
+            <div style="width: 202px; height: 111px; left: 0px; top: 0px; position: absolute; box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.10); border-radius: 5px; border: 1px #5495A5 solid"></div>
+            <div style="left: 12px; top: 9px; position: absolute; color: #00CFFF; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">Hamilton</div>
+            <div style="left: 12px; top: 34px; position: absolute; color: #00CFFF; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">Residentioal - Sale</div>
+            <div style="width: 16px; height: 16px; left: 12px; top: 85px; position: absolute">
+            <img style="width: 14.67px; height: 13.33px; left: 0.67px; top: 0.67px; position: absolute" src="{{url_for('static', filename='blueheart.png')}}" />
+        </div>
+        </a>
+
+        <a href="/detail" style="text-decoration: none;">
+        <div style="width: 202px; height: 120px; left: 240px; top: 1px; position: absolute">
+            <div style="width: 202px; height: 111px; left: 0px; top: 0px; position: absolute; box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.10); border-radius: 5px; border: 1px #5495A5 solid"></div>
+            <div style="left: 12px; top: 9px; position: absolute; color: #00CFFF; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">NorthShore</div>
+            <div style="left: 12px; top: 34px; position: absolute; color: #00CFFF; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">Residentioal - Sale</div>
+            <div style="width: 16px; height: 16px; left: 12px; top: 85px; position: absolute">
+            <img style="width: 14.67px; height: 13.33px; left: 0.67px; top: 0.67px; position: absolute" src="{{url_for('static', filename='blueheart.png')}}" />
+
+        </a>
+
+        </div>
+    </body>
 </html>

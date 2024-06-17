@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <title>Detail Page</title>
+    </head>
     <body>
 
         <!--This Code down below shows the following top categories for each main page-->
@@ -54,15 +57,31 @@
             <div style="width: 15px; height: 11px; left: 3px; top: 10px; position: absolute" src="{{url_for('static', filename='photo.png')}}"></div>
             </div>
 
+            <a href="/mappopup" style="text-decoration: none;">
             <img style="width: 355px; height: 237px; left: 1030px; top: 772px; position: absolute" src="{{url_for ('static', filename='detailmap.png')}}" />
+            </a>
+            
+
             <div style="left: 346px; top: 821px; position: absolute; color: black; font-size: 32px; font-family: Nunito Sans; font-weight: 800; word-wrap: break-word">5/867 New North Road, <br/>Mount Albert, Auckland City</div>
             <div style="left: 345px; top: 915px; position: absolute; color: black; font-size: 20px; font-family: Nunito Sans; font-weight: 400; word-wrap: break-word">Perfect Family Starter or Investor's Dream!</div>
+
+            <!--Photo and Video pop ups-->
+            
             <div style="left: 463px; top: 720px; position: absolute; color: white; font-size: 14px; font-family: Nunito Sans; font-weight: 800; word-wrap: break-word">Photos</div>
+
+            <a href="/video" style="text-decoration: none;">
             <div style="left: 725px; top: 720px; position: absolute; color: #5495A5; font-size: 14px; font-family: Nunito Sans; font-weight: 800; word-wrap: break-word">Videos</div>
+            </a>
+
+            <a href="/floorplan" style="text-decoration: none;">
             <div style="left: 972px; top: 720px; position: absolute; color: #5495A5; font-size: 14px; font-family: Nunito Sans; font-weight: 800; word-wrap: break-word">Floorplan</div>
-           
-           
+            </a>
+
+            <a href="/solarpopup" style="text-decoration: none;">
             <div style="left: 1240px; top: 720px; position: absolute; color: #5495A5; font-size: 14px; font-family: Nunito Sans; font-weight: 800; word-wrap: break-word">Solar</div>
+            </a>
+
+           
             <div style="width: 592px; height: 382px; left: 349px; top: 1065px; position: absolute"><span style="color: black; font-size: 16px; font-family: Nunito Sans; font-weight: 400; word-wrap: break-word">Property details<br/>Listing # HME2992 | Listed on 21 March<br/>In-zone for highly sought after Gladstone Primary and Mt Albert Grammar School (MAGS), this sunny home is the perfect step into the bustling and ever popular Mt Albert!<br/></span><span style="color: black; font-size: 16px; font-family: Nunito Sans; font-weight: 400; word-wrap: break-word">Only 10 minutes' walk to Gladstone Primary School; 15 minutes' walk to Mt Albert Grammar School (MAGS)<br/>Excellent Cycling Network to the City!<br/>Renovated home with new kitchen, newly painted inside and out.<br/>Roof was replaced in September 2022<br/>Open plan living/dining - Excellent indoor-outdoor flow<br/>Internal access high studded garage. 3 more off street parkings by the property.<br/></span><span style="color: black; font-size: 16px; font-family: Nunito Sans; font-weight: 400; word-wrap: break-word">Private enclave in a super central location just behind the Mt albert shops. Only steps to Mt Albert Train station, local shops and restaurants. Steps away from Gladstone Primary. Minutes to Mt Albert Grammar School (MAGS), motorway and St Lukes Shopping Centre.<br/>Easy access to motorway, supermarkets, Unitec campus, St Lukes and other exceptional community facilities including parks, aquatic centre and much more. Seize this opportunity to get a piece of this beautiful leafy suburb!<br/>We are always happy to work with other agents and welcome conjunctional sales, so AGENTS, bring your buyers!<br/>Don't miss this golden opportunity!</span></div>
             <img style="width: 649px; height: 276px; left: 340px; top: 1594px; position: absolute" src="{{url_for('static', filename='detail_img.png')}}" />
             <img style="width: 1096px; height: 679px; left: 331px; top: 1862px; position: absolute" src="{{url_for('static', filename='detail_income.png')}}" />
@@ -79,6 +98,7 @@
             <img style="width: 160px; height: 103.90px; left: 701px; top: 0px; position: absolute" src="{{url_for('static', filename='property.png')}}" />
             <img style="width: 160px; height: 103.90px; left: 878px; top: 0px; position: absolute" src="{{url_for('static', filename='property.png')}}" />
             </div>
+        </div>
 
     </body>
 </html>
