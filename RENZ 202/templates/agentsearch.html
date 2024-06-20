@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <div style="width: 100%; height: 100%; position: relative; background: white">
-    <img style="width: 989px; height: 1066px; left: 739px; top: 51px; position: absolute" src="{{ url_for('static', filename='map.png')}}" />
+  
 
     <a href="/" style="text-decoration: none;">
         <div style="left: 210px; top: 18px; position: absolute; color: #5495A5; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Residential</div>
@@ -53,18 +53,150 @@
         <div style="width: 4px; height: 5.33px; left: 6px; top: 9.33px; position: absolute; border-radius: 1px; border: 1.50px #396874 solid"></div>
     </div>
 
-    <div style="width: 712px; height: 92px; left: 11px; top: 59px; position: absolute">
-        <div style="width: 712px; height: 92px; left: 0px; top: 0px; position: absolute; box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.10); border-radius: 8px; border: 1px #5495A5 solid"></div>
-        <div style="width: 437px; height: 31px; left: 13px; top: 47px; position: absolute; border-radius: 5px; border: 1px #5495A5 solid"></div>
-        <div style="width: 114px; height: 33px; left: 461px; top: 46px; position: absolute; border-radius: 5px; border: 1px #5495A5 solid"></div>
-        <div style="width: 114px; height: 33px; left: 585px; top: 46px; position: absolute; border-radius: 5px; border: 1px #5495A5 solid"></div>
-        <div style="left: 122px; top: 10px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">Buy</div>
-        <div style="left: 50px; top: 54px; position: absolute; color: #CACACA; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">Search by address, suburb or city</div>
-        <div style="left: 518px; top: 55px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">Filter</div>
-        <div style="left: 634px; top: 55px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">Search</div>
-        <div style="left: 531px; top: 10px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">Rent</div>
-        <div style="width: 712px; height: 0px; left: 0px; top: 38px; position: absolute; border: 1px #5495A5 solid"></div>
-    </div>
 
 
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Agent Detail</title>
+        <style>
+           
+            
+            .section {
+                position: absolute;
+                display: flex;
+            }
+            .section img {
+                border: 1.5px solid #ffffff;
+            }
+            .section-1 {
+                top: 139px;
+                left: 300px;
+            }
+            .section-1 img {
+                width: 300px;
+                height: 600px;
+            }
+          
+            .section-2 {
+                top: 139px;
+                left: 630px;
+            }
+
+            .section-2 .title1 {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 546px;
+                height: 181px;
+                font-weight: bold;
+                font-size: 30px;
+                line-height: 65px;
+                color: #000000;
+                font-family: 'Noto Sans', sans-serif;
+            }
+            .section-2 .title2 {
+                position: absolute;
+                top: 40px;
+                left: 0px;
+                width: 546px;
+                height: 181px;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 65px;
+                color: #000000;
+                font-family: 'Noto Sans', sans-serif;
+            }
+            .section-2 .title3 {
+                position: absolute;
+                top: 80px;
+                left: 0px;
+                width: 546px;
+                height: 181px;
+                font-weight: bold;
+                font-size: 50px;
+                line-height: 65px;
+                color: #000000;
+                font-family: 'Noto Sans', sans-serif;
+            }
+            
+            .section-2 .content {
+                position: absolute;
+                top: 330px;
+                left: 0px;
+                width: 713px;
+                height: 161px;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 33px;
+                color: #000000;
+                font-family: 'Noto Sans', sans-serif;
+            }
+            .section-3 {
+                top: 1100px;
+                left: 300px;
+            }
+            .section-3 img {
+                top: 200;
+                left: 0;
+                width: 360px;
+                height: 218px;
+    
+            }
+            .section-3 .title {
+                position: absolute;
+                top: 250px;
+                left: 0px;
+                width: 370px;
+                height: 181px;
+                font-weight: 700;
+                font-size: 32px;
+                line-height: 44px;
+                color: #000000;
+            }
+            .section-3 .content {
+                position: absolute;
+                top: 570px;
+                left: 0px;
+                width: 370px;
+                height: 181px;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 27px;
+                color: #000000;
+           
+        </style>
+    </head>
+    <body>
+       
+        <div class="section section-1">
+            <img src="{{ url_for('static', filename='agent20.png') }}" alt="Agent 20">
+                
+            </div>
+            <div class="section section-2">
+                <div class="title1">About</div>
+                <div class="title2">Sales - Last 24 months</div>
+                <div class="title3">77 / $107.2M</div>
+                <img style="width: 187px; height: 600px; left: 800px; top: 200px; position: absolute" src="{{url_for('static', filename='addbanner.png')}}" />
+
+                <div class="content">Over 20 plus years in real estate, Karl has experience his share of booms, slumps and recovery cycles. It is the experience gained from being at the 'coal face' that makes him the best agent qualified to sell your home and/or invest.
+
+Born and raised in the Eastern Beaches, Karl possesses an affinity and knowledge of the area that comes with being a local.
+
+When the opportunity arose in the late 1990's to turn a burgeoning interest for real estate into a bonafide career, Eastern Beaches was the obvious place to start.
+
+More than a decade on and the Eastern Beaches remains at the core of Karl's business. It is here that Karl has established an extensive and loyal customer base. It is in the Eastern Beaches that he has honed his knowledge of the New Zealand Real Estate industry.
+
+Over the course of his 15 plus years in real estate, Karl has experience his fair share of booms, slumps and recovery cycles. It is the experience gained from being at the 'coal face' that makes him the best agent qualified to sell your home and/or invest.
+
+Whilst the real estate market is anything but consistent, Karl's commitment to providing clients with the highest level of service & knowledge has been unwavering. His high level of repeat business is testament to this.</div>
+            </div>
+            <div style="width: 750px; height: 0px; left: 630px; top: 380px; position: absolute; border: 1px #00CFFF solid"></div>
+            <div class="section section-3">
+                <img src="{{ url_for('static', filename='image18.png') }}" alt="Image 18">
+                <div class="title">Real-Time feedback to share with vendors realestate.co.nz has a brand new feature that shares previously unavailable feedback from property s..</div>
+                <div class="content">5 searching features you need to try search right down to the street you want to live on, school zone, or properties with re... For buyers Tip and tricks</div>
+                
+    </body>
+    
 </html>
