@@ -59,5 +59,9 @@ def floorplan():
 def solarpopup():
     return render_template('solarpopup.html')
 
+@app.route('/filterpopup')
+def filterpopup():
+    return render_template('filterpopup.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
