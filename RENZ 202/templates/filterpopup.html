@@ -1,120 +1,251 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Pop-Up Form</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    
-<style>
-    body {
-    font-family: Arial, sans-serif;
-}
-
-#popup {
-    display: none; /* Hidden by default */
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4);
-    padding-top: 60px;
-}
-
-.popup-content {
-    background-color: #fefefe;
-    margin: 5% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-}
-
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.form-section {
-    margin-bottom: 15px;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-input[type="text"],
-input[type="number"] {
-    width: 100%;
-    padding: 8px;
-    box-sizing: border-box;
-    margin-bottom: 10px;
-}
-
-input[type="checkbox"] {
-    margin-right: 10px;
-}
-
-button[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-}
-
-button[type="submit"]:hover {
-    background-color: #45a049;
-}
-
-</style>
-
+<hthml lang="en">
+    <title>Filter Page</title>
     <body>
-        <a href="#" id="openPopup">Open Filter Form</a>
-    
-        <div id="popup" class="popup">
-            <div class="popup-content">
-                <span id="closePopup" class="close">&times;</span>
-                <!-- Form content starts here -->
-                <form>
-                    <div class="form-section">
-                        <label for="location">Location:</label>
-                        <input type="text" id="location" name="location">
-                    </div>
-                    <div class="form-section">
-                        <label>Property Type:</label>
-                        <input type="checkbox" id="house" name="property_type" value="house">
-                        <label for="house">House</label>
-                        <input type="checkbox" id="apartment" name="property_type" value="apartment">
-                        <label for="apartment">Apartment</label>
-                        <!-- Add other property types similarly -->
-                    </div>
-                    <div class="form-section">
-                        <label for="price_min">Price Range:</label>
-                        <input type="number" id="price_min" name="price_min" placeholder="Min">
-                        <input type="number" id="price_max" name="price_max" placeholder="Max">
-                    </div>
-                    <!-- Add other form sections similarly -->
-                    <button type="submit">Search</button>
-                </form>
-                <!-- Form content ends here -->
+        <div style="width: 740px; height: 1600px; position: relative; background: white">
+            <div style="width: 740px; height: 57px; left: 0px; top: 0px; position: absolute; background: #00CFFF"></div>
+            <div style="width: 50px; height: 18px; left: 23px; top: 19px; position: absolute; color: white; font-size: 16px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Filter</div>
+            <div style="width: 24px; height: 24px; left: 688px; top: 16px; position: absolute">
+              <img style="width: 18px; height: 18px; left: 3px; top: 3px; position: absolute" src="https://via.placeholder.com/18x18" />
             </div>
-        </div>
-    
-        <script src="script.js"></script>
+            <div style="width: 128px; height: 18px; left: 68px; top: 231px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 400; word-wrap: break-word">House</div>
+            <div style="width: 712px; height: 172px; left: 15px; top: 186px; position: absolute; box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.10); border-radius: 8px; border: 1px #00CFFF solid"></div>
+            <div style="width: 10px; height: 10px; left: 50px; top: 235px; position: absolute; box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.10); border-radius: 3px; border: 1px #5495A5 solid"></div>
+            <div style="width: 128px; height: 18px; left: 68px; top: 259px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 400; word-wrap: break-word">Apartment</div>
+            <div style="width: 10px; height: 10px; left: 50px; top: 263px; position: absolute; box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.10); border-radius: 3px; border: 1px #5495A5 solid"></div>
+            <div style="width: 128px; height: 18px; left: 68px; top: 291px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 400; word-wrap: break-word">Unit</div>
+            <div style="width: 10px; height: 10px; left: 50px; top: 295px; position: absolute; box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.10); border-radius: 3px; border: 1px #5495A5 solid"></div>
+            <div style="width: 128px; height: 18px; left: 68px; top: 319px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 400; word-wrap: break-word">Retirement Living</div>
+            <div style="width: 10px; height: 10px; left: 50px; top: 323px; position: absolute; box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.10); border-radius: 3px; border: 1px #5495A5 solid"></div>
+            <div style="width: 128px; height: 18px; left: 303px; top: 231px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 400; word-wrap: break-word">Lifestyle Property</div>
+            <div style="width: 10px; height: 10px; left: 285px; top: 235px; position: absolute; box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.10); border-radius: 3px; border: 1px #5495A5 solid"></div>
+            <div style="width: 128px; height: 18px; left: 303px; top: 259px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 400; word-wrap: break-word">Townhouse</div>
+            <div style="width: 10px; height: 10px; left: 285px; top: 263px; position: absolute; box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.10); border-radius: 3px; border: 1px #5495A5 solid"></div>
+            <div style="width: 128px; height: 18px; left: 303px; top: 291px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 400; word-wrap: break-word">Home & Income</div>
+            <div style="width: 10px; height: 10px; left: 285px; top: 295px; position: absolute; box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.10); border-radius: 3px; border: 1px #5495A5 solid"></div>
+            <div style="width: 128px; height: 18px; left: 303px; top: 319px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 400; word-wrap: break-word">Multiful Properties</div>
+            <div style="width: 10px; height: 10px; left: 285px; top: 323px; position: absolute; box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.10); border-radius: 3px; border: 1px #5495A5 solid"></div>
+            <div style="width: 10px; height: 10px; left: 541px; top: 235px; position: absolute; box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.10); border-radius: 3px; border: 1px #5495A5 solid"></div>
+            <div style="width: 128px; height: 18px; left: 559px; top: 259px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 400; word-wrap: break-word">Lifestyle Section</div>
+            <div style="width: 10px; height: 10px; left: 541px; top: 263px; position: absolute; box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.10); border-radius: 3px; border: 1px #5495A5 solid"></div>
+            <div style="width: 128px; height: 18px; left: 559px; top: 291px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 400; word-wrap: break-word">Studio</div>
+            <div style="width: 10px; height: 10px; left: 541px; top: 295px; position: absolute; box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.10); border-radius: 3px; border: 1px #5495A5 solid"></div>
+            <div style="width: 128px; height: 18px; left: 559px; top: 319px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 400; word-wrap: break-word">Carpark</div>
+            <div style="width: 128px; height: 18px; left: 559px; top: 231px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 400; word-wrap: break-word">Section</div>
+            <div style="width: 10px; height: 10px; left: 541px; top: 323px; position: absolute; box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.10); border-radius: 3px; border: 1px #5495A5 solid"></div>
+            <div style="left: 35px; top: 197px; position: absolute; color: #434343; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Property type</div>
+            <div style="left: 661px; top: 195px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">Clear</div>
+            <div style="width: 24px; height: 24px; left: 697px; top: 191px; position: absolute">
+              <div style="width: 24px; height: 24px; left: 12px; top: -4.97px; position: absolute; transform: rotate(45deg); transform-origin: 0 0">
+                <div style="width: 10px; height: 2px; left: 7px; top: 11px; position: absolute; border: 1px #050505 solid"></div>
+                <div style="width: 2px; height: 10px; left: 11px; top: 7px; position: absolute; border: 1px #050505 solid"></div>
+                <div style="width: 20px; height: 20px; left: 2px; top: 2px; position: absolute; border: 1px #050505 solid"></div>
+              </div>
+            </div>
+            <div style="width: 128px; height: 18px; left: 68px; top: 1109px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 400; word-wrap: break-word">Display price</div>
+            <div style="width: 712px; height: 139px; left: 15px; top: 1064px; position: absolute; box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.10); border-radius: 8px; border: 1px #00CFFF solid"></div>
+            <div style="width: 10px; height: 10px; left: 50px; top: 1113px; position: absolute; box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.10); border-radius: 3px; border: 1px #5495A5 solid"></div>
+            <div style="width: 128px; height: 18px; left: 68px; top: 1137px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 400; word-wrap: break-word">Tender</div>
+            <div style="width: 10px; height: 10px; left: 50px; top: 1141px; position: absolute; box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.10); border-radius: 3px; border: 1px #5495A5 solid"></div>
+            <div style="width: 128px; height: 18px; left: 68px; top: 1169px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 400; word-wrap: break-word">Deadline Sale</div>
+            <div style="width: 10px; height: 10px; left: 50px; top: 1173px; position: absolute; box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.10); border-radius: 3px; border: 1px #5495A5 solid"></div>
+            <div style="width: 128px; height: 18px; left: 303px; top: 1109px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 400; word-wrap: break-word">Negotiation</div>
+            <div style="width: 10px; height: 10px; left: 285px; top: 1113px; position: absolute; box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.10); border-radius: 3px; border: 1px #5495A5 solid"></div>
+            <div style="width: 128px; height: 18px; left: 303px; top: 1137px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 400; word-wrap: break-word">POA</div>
+            <div style="width: 10px; height: 10px; left: 285px; top: 1141px; position: absolute; box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.10); border-radius: 3px; border: 1px #5495A5 solid"></div>
+            <div style="width: 10px; height: 10px; left: 541px; top: 1113px; position: absolute; box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.10); border-radius: 3px; border: 1px #5495A5 solid"></div>
+            <div style="width: 128px; height: 18px; left: 559px; top: 1137px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 400; word-wrap: break-word">Offers</div>
+            <div style="width: 10px; height: 10px; left: 541px; top: 1141px; position: absolute; box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.10); border-radius: 3px; border: 1px #5495A5 solid"></div>
+            <div style="width: 128px; height: 18px; left: 559px; top: 1109px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 400; word-wrap: break-word">Auction</div>
+            <div style="left: 35px; top: 1075px; position: absolute; color: #434343; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Property Method</div>
+            <div style="left: 661px; top: 1073px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">Clear</div>
+            <div style="width: 24px; height: 24px; left: 697px; top: 1069px; position: absolute">
+              <div style="width: 24px; height: 24px; left: 12px; top: -4.97px; position: absolute; transform: rotate(45deg); transform-origin: 0 0">
+                <div style="width: 10px; height: 2px; left: 7px; top: 11px; position: absolute; border: 1px #050505 solid"></div>
+                <div style="width: 2px; height: 10px; left: 11px; top: 7px; position: absolute; border: 1px #050505 solid"></div>
+                <div style="width: 20px; height: 20px; left: 2px; top: 2px; position: absolute; border: 1px #050505 solid"></div>
+              </div>
+            </div>
+            <div style="width: 128px; height: 18px; left: 68px; top: 1270px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 400; word-wrap: break-word">New build</div>
+            <div style="width: 712px; height: 109px; left: 15px; top: 1225px; position: absolute; box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.10); border-radius: 8px; border: 1px #00CFFF solid"></div>
+            <div style="width: 10px; height: 10px; left: 50px; top: 1274px; position: absolute; box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.10); border-radius: 3px; border: 1px #5495A5 solid"></div>
+            <div style="width: 128px; height: 18px; left: 68px; top: 1298px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 400; word-wrap: break-word">Floor plans</div>
+            <div style="width: 10px; height: 10px; left: 50px; top: 1302px; position: absolute; box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.10); border-radius: 3px; border: 1px #5495A5 solid"></div>
+            <div style="width: 128px; height: 18px; left: 303px; top: 1270px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 400; word-wrap: break-word">Swimming pool</div>
+            <div style="width: 10px; height: 10px; left: 285px; top: 1274px; position: absolute; box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.10); border-radius: 3px; border: 1px #5495A5 solid"></div>
+            <div style="width: 128px; height: 18px; left: 303px; top: 1298px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 400; word-wrap: break-word">Video</div>
+            <div style="width: 10px; height: 10px; left: 285px; top: 1302px; position: absolute; box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.10); border-radius: 3px; border: 1px #5495A5 solid"></div>
+            <div style="width: 10px; height: 10px; left: 541px; top: 1274px; position: absolute; box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.10); border-radius: 3px; border: 1px #5495A5 solid"></div>
+            <div style="width: 128px; height: 18px; left: 559px; top: 1298px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 400; word-wrap: break-word">Virtual walkthroughs</div>
+            <div style="width: 10px; height: 10px; left: 541px; top: 1302px; position: absolute; box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.10); border-radius: 3px; border: 1px #5495A5 solid"></div>
+            <div style="width: 128px; height: 18px; left: 559px; top: 1270px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 400; word-wrap: break-word">Coastal waterfront</div>
+            <div style="left: 35px; top: 1236px; position: absolute; color: #434343; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Features</div>
+            <div style="left: 661px; top: 1234px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">Clear</div>
+            <div style="width: 24px; height: 24px; left: 697px; top: 1231px; position: absolute">
+              <div style="width: 24px; height: 24px; left: 12px; top: -4.97px; position: absolute; transform: rotate(45deg); transform-origin: 0 0">
+                <div style="width: 10px; height: 2px; left: 7px; top: 11px; position: absolute; border: 1px #050505 solid"></div>
+                <div style="width: 2px; height: 10px; left: 11px; top: 7px; position: absolute; border: 1px #050505 solid"></div>
+                <div style="width: 20px; height: 20px; left: 2px; top: 2px; position: absolute; border: 1px #050505 solid"></div>
+              </div>
+            </div>
+            <div style="width: 128px; height: 18px; left: 68px; top: 1515px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 400; word-wrap: break-word">Open home</div>
+            <div style="width: 712px; height: 74px; left: 15px; top: 1470px; position: absolute; box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.10); border-radius: 8px; border: 1px #00CFFF solid"></div>
+            <div style="width: 10px; height: 10px; left: 50px; top: 1519px; position: absolute; box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.10); border-radius: 3px; border: 1px #5495A5 solid"></div>
+            <div style="width: 128px; height: 18px; left: 303px; top: 1515px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 400; word-wrap: break-word">Motgagee sale</div>
+            <div style="width: 10px; height: 10px; left: 285px; top: 1519px; position: absolute; box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.10); border-radius: 3px; border: 1px #5495A5 solid"></div>
+            <div style="width: 10px; height: 10px; left: 541px; top: 1519px; position: absolute; box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.10); border-radius: 3px; border: 1px #5495A5 solid"></div>
+            <div style="width: 128px; height: 18px; left: 559px; top: 1515px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 400; word-wrap: break-word">Address displyed</div>
+            <div style="left: 35px; top: 1481px; position: absolute; color: #434343; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Listing status</div>
+            <div style="left: 661px; top: 1479px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">Clear</div>
+            <div style="width: 24px; height: 24px; left: 697px; top: 1476px; position: absolute">
+              <div style="width: 24px; height: 24px; left: 12px; top: -4.97px; position: absolute; transform: rotate(45deg); transform-origin: 0 0">
+                <div style="width: 10px; height: 2px; left: 7px; top: 11px; position: absolute; border: 1px #050505 solid"></div>
+                <div style="width: 2px; height: 10px; left: 11px; top: 7px; position: absolute; border: 1px #050505 solid"></div>
+                <div style="width: 20px; height: 20px; left: 2px; top: 2px; position: absolute; border: 1px #050505 solid"></div>
+              </div>
+            </div>
+            <div style="left: 634px; top: 20px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">Clear All</div>
+            <div style="width: 19px; height: 19px; left: 77px; top: 20px; position: absolute; background: white; border-radius: 9999px"></div>
+            <div style="width: 17px; height: 18px; left: 83px; top: 20px; position: absolute; color: #4E4E4E; font-size: 14px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">3</div>
+            <div style="left: 661px; top: 388px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">Clear</div>
+            <div style="width: 24px; height: 24px; left: 697px; top: 387px; position: absolute">
+              <div style="width: 24px; height: 24px; left: 12px; top: -4.97px; position: absolute; transform: rotate(45deg); transform-origin: 0 0">
+                <div style="width: 10px; height: 2px; left: 7px; top: 11px; position: absolute; border: 1px #050505 solid"></div>
+                <div style="width: 2px; height: 10px; left: 11px; top: 7px; position: absolute; border: 1px #050505 solid"></div>
+                <div style="width: 20px; height: 20px; left: 2px; top: 2px; position: absolute; border: 1px #050505 solid"></div>
+              </div>
+            </div>
+            <div style="width: 712px; height: 92px; left: 15px; top: 380px; position: absolute; box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.10); border-radius: 8px; border: 1px #00CFFF solid"></div>
+            <div style="left: 35px; top: 390px; position: absolute; color: #434343; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Price Range</div>
+            <div style="width: 300px; height: 31px; left: 28px; top: 427px; position: absolute; border-radius: 5px; border: 1px #5495A5 solid"></div>
+            <div style="width: 300px; height: 33px; left: 414px; top: 426px; position: absolute; border-radius: 5px; border: 1px #00CFFF solid"></div>
+            <div style="left: 431px; top: 434px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">Any</div>
+            <div style="left: 356px; top: 434px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">to</div>
+            <div style="left: 47px; top: 434px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">Any</div>
+            <div style="width: 12px; height: 6.86px; left: 302px; top: 442px; position: absolute; border: 1px #010101 solid"></div>
+            <div style="width: 12px; height: 6.86px; left: 691px; top: 442px; position: absolute; border: 1px #010101 solid"></div>
+            <div style="width: 12px; height: 6.86px; left: 302px; top: 554px; position: absolute; border: 1px #010101 solid"></div>
+            <div style="width: 12px; height: 6.86px; left: 691px; top: 554px; position: absolute; border: 1px #010101 solid"></div>
+            <div style="width: 12px; height: 6.86px; left: 302px; top: 667px; position: absolute; border: 1px #010101 solid"></div>
+            <div style="width: 12px; height: 6.86px; left: 302px; top: 781px; position: absolute; border: 1px #010101 solid"></div>
+            <div style="width: 12px; height: 6.86px; left: 691px; top: 781px; position: absolute; border: 1px #010101 solid"></div>
+            <div style="width: 12px; height: 6.86px; left: 691px; top: 667px; position: absolute; border: 1px #010101 solid"></div>
+            <div style="width: 12px; height: 6.86px; left: 302px; top: 898px; position: absolute; border: 1px #010101 solid"></div>
+            <div style="width: 12px; height: 6.86px; left: 302px; top: 1012px; position: absolute; border: 1px #010101 solid"></div>
+            <div style="width: 12px; height: 6.86px; left: 691px; top: 1012px; position: absolute; border: 1px #010101 solid"></div>
+            <div style="width: 12px; height: 6.86px; left: 691px; top: 898px; position: absolute; border: 1px #010101 solid"></div>
+            <div style="left: 661px; top: 502px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">Clear</div>
+            <div style="width: 24px; height: 24px; left: 697px; top: 501px; position: absolute">
+              <div style="width: 24px; height: 24px; left: 12px; top: -4.97px; position: absolute; transform: rotate(45deg); transform-origin: 0 0">
+                <div style="width: 10px; height: 2px; left: 7px; top: 11px; position: absolute; border: 1px #050505 solid"></div>
+                <div style="width: 2px; height: 10px; left: 11px; top: 7px; position: absolute; border: 1px #050505 solid"></div>
+                <div style="width: 20px; height: 20px; left: 2px; top: 2px; position: absolute; border: 1px #050505 solid"></div>
+              </div>
+            </div>
+            <div style="width: 712px; height: 92px; left: 15px; top: 494px; position: absolute; box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.10); border-radius: 8px; border: 1px #00CFFF solid"></div>
+            <div style="left: 35px; top: 504px; position: absolute; color: #434343; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Bed Rooms</div>
+            <div style="width: 300px; height: 31px; left: 28px; top: 541px; position: absolute; border-radius: 5px; border: 1px #5495A5 solid"></div>
+            <div style="width: 300px; height: 33px; left: 414px; top: 540px; position: absolute; border-radius: 5px; border: 1px #00CFFF solid"></div>
+            <div style="left: 431px; top: 548px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">Any</div>
+            <div style="left: 356px; top: 548px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">to</div>
+            <div style="left: 47px; top: 548px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">Any</div>
+            <div style="left: 661px; top: 616px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">Clear</div>
+            <div style="width: 24px; height: 24px; left: 697px; top: 613px; position: absolute">
+              <div style="width: 24px; height: 24px; left: 12px; top: -4.97px; position: absolute; transform: rotate(45deg); transform-origin: 0 0">
+                <div style="width: 10px; height: 2px; left: 7px; top: 11px; position: absolute; border: 1px #050505 solid"></div>
+                <div style="width: 2px; height: 10px; left: 11px; top: 7px; position: absolute; border: 1px #050505 solid"></div>
+                <div style="width: 20px; height: 20px; left: 2px; top: 2px; position: absolute; border: 1px #050505 solid"></div>
+              </div>
+            </div>
+            <div style="width: 712px; height: 92px; left: 15px; top: 608px; position: absolute; box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.10); border-radius: 8px; border: 1px #00CFFF solid"></div>
+            <div style="left: 35px; top: 618px; position: absolute; color: #434343; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Bath Rooms</div>
+            <div style="width: 300px; height: 31px; left: 28px; top: 655px; position: absolute; border-radius: 5px; border: 1px #5495A5 solid"></div>
+            <div style="width: 300px; height: 33px; left: 414px; top: 654px; position: absolute; border-radius: 5px; border: 1px #00CFFF solid"></div>
+            <div style="left: 431px; top: 662px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">Any</div>
+            <div style="left: 356px; top: 662px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">to</div>
+            <div style="left: 47px; top: 662px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">Any</div>
+            <div style="left: 661px; top: 730px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">Clear</div>
+            <div style="width: 24px; height: 24px; left: 697px; top: 729px; position: absolute">
+              <div style="width: 24px; height: 24px; left: 12px; top: -4.97px; position: absolute; transform: rotate(45deg); transform-origin: 0 0">
+                <div style="width: 10px; height: 2px; left: 7px; top: 11px; position: absolute; border: 1px #050505 solid"></div>
+                <div style="width: 2px; height: 10px; left: 11px; top: 7px; position: absolute; border: 1px #050505 solid"></div>
+                <div style="width: 20px; height: 20px; left: 2px; top: 2px; position: absolute; border: 1px #050505 solid"></div>
+              </div>
+            </div>
+            <div style="width: 712px; height: 92px; left: 15px; top: 722px; position: absolute; box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.10); border-radius: 8px; border: 1px #00CFFF solid"></div>
+            <div style="left: 35px; top: 732px; position: absolute; color: #434343; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Carparks</div>
+            <div style="width: 300px; height: 31px; left: 28px; top: 769px; position: absolute; border-radius: 5px; border: 1px #5495A5 solid"></div>
+            <div style="width: 300px; height: 33px; left: 414px; top: 768px; position: absolute; border-radius: 5px; border: 1px #00CFFF solid"></div>
+            <div style="left: 431px; top: 776px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">Any</div>
+            <div style="left: 356px; top: 776px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">to</div>
+            <div style="left: 47px; top: 776px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">Any</div>
+            <div style="left: 661px; top: 844px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">Clear</div>
+            <div style="width: 24px; height: 24px; left: 697px; top: 842px; position: absolute">
+              <div style="width: 24px; height: 24px; left: 12px; top: -4.97px; position: absolute; transform: rotate(45deg); transform-origin: 0 0">
+                <div style="width: 10px; height: 2px; left: 7px; top: 11px; position: absolute; border: 1px #050505 solid"></div>
+                <div style="width: 2px; height: 10px; left: 11px; top: 7px; position: absolute; border: 1px #050505 solid"></div>
+                <div style="width: 20px; height: 20px; left: 2px; top: 2px; position: absolute; border: 1px #050505 solid"></div>
+              </div>
+            </div>
+            <div style="width: 712px; height: 92px; left: 15px; top: 836px; position: absolute; box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.10); border-radius: 8px; border: 1px #00CFFF solid"></div>
+            <div style="left: 35px; top: 846px; position: absolute; color: #434343; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Land area</div>
+            <div style="width: 300px; height: 31px; left: 28px; top: 883px; position: absolute; border-radius: 5px; border: 1px #5495A5 solid"></div>
+            <div style="width: 300px; height: 33px; left: 414px; top: 882px; position: absolute; border-radius: 5px; border: 1px #00CFFF solid"></div>
+            <div style="left: 431px; top: 890px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">Any</div>
+            <div style="left: 356px; top: 890px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">to</div>
+            <div style="left: 47px; top: 890px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">Any</div>
+            <div style="left: 661px; top: 958px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">Clear</div>
+            <div style="width: 24px; height: 24px; left: 697px; top: 956px; position: absolute">
+              <div style="width: 24px; height: 24px; left: 12px; top: -4.97px; position: absolute; transform: rotate(45deg); transform-origin: 0 0">
+                <div style="width: 10px; height: 2px; left: 7px; top: 11px; position: absolute; border: 1px #050505 solid"></div>
+                <div style="width: 2px; height: 10px; left: 11px; top: 7px; position: absolute; border: 1px #050505 solid"></div>
+                <div style="width: 20px; height: 20px; left: 2px; top: 2px; position: absolute; border: 1px #050505 solid"></div>
+              </div>
+            </div>
+            <div style="width: 712px; height: 92px; left: 15px; top: 950px; position: absolute; box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.10); border-radius: 8px; border: 1px #00CFFF solid"></div>
+            <div style="left: 35px; top: 960px; position: absolute; color: #434343; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Floor area</div>
+            <div style="width: 300px; height: 31px; left: 28px; top: 997px; position: absolute; border-radius: 5px; border: 1px #5495A5 solid"></div>
+            <div style="width: 300px; height: 33px; left: 414px; top: 996px; position: absolute; border-radius: 5px; border: 1px #00CFFF solid"></div>
+            <div style="left: 431px; top: 1004px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">Any</div>
+            <div style="left: 356px; top: 1004px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">to</div>
+            <div style="left: 47px; top: 1004px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">Any</div>
+            <div style="left: 661px; top: 1364px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">Clear</div>
+            <div style="width: 24px; height: 24px; left: 697px; top: 1362px; position: absolute">
+              <div style="width: 24px; height: 24px; left: 12px; top: -4.97px; position: absolute; transform: rotate(45deg); transform-origin: 0 0">
+                <div style="width: 10px; height: 2px; left: 7px; top: 11px; position: absolute; border: 1px #050505 solid"></div>
+                <div style="width: 2px; height: 10px; left: 11px; top: 7px; position: absolute; border: 1px #050505 solid"></div>
+                <div style="width: 20px; height: 20px; left: 2px; top: 2px; position: absolute; border: 1px #050505 solid"></div>
+              </div>
+            </div>
+            <div style="width: 712px; height: 92px; left: 15px; top: 1356px; position: absolute; box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.10); border-radius: 8px; border: 1px #00CFFF solid"></div>
+            <div style="left: 35px; top: 1366px; position: absolute; color: #434343; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Keyword search</div>
+            <div style="width: 300px; height: 31px; left: 28px; top: 1403px; position: absolute; border-radius: 5px; border: 1px #00CFFF solid"></div>
+            <div style="left: 47px; top: 1410px; position: absolute; color: #ACACAC; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">“brick & tiles”, pool, beach</div>
+            <div style="width: 712px; height: 92px; left: 15px; top: 74px; position: absolute; box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.10); border-radius: 8px; border: 1px #00CFFF solid"></div>
+            <div style="left: 35px; top: 84px; position: absolute; color: #434343; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Location</div>
+            <div style="width: 561px; height: 31px; left: 28px; top: 121px; position: absolute; border-radius: 5px; border: 1px #00CFFF solid"></div>
+            <div style="width: 114px; height: 33px; left: 600px; top: 120px; position: absolute; border-radius: 5px; border: 1px #00CFFF solid"></div>
+            <div style="left: 65px; top: 128px; position: absolute; color: #CACACA; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">Search by address, suburb or city</div>
+            <div style="left: 649px; top: 129px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">Search</div>
+            <div style="left: 661px; top: 85px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">Clear</div>
+            <div style="width: 712px; height: 0px; left: 15px; top: 112px; position: absolute; border: 1px #00CFFF solid"></div>
+            <div style="width: 24px; height: 24px; left: 614px; top: 125px; position: absolute">
+              <div style="width: 12px; height: 12px; left: 5px; top: 5px; position: absolute; border-radius: 9999px; border: 1px #00CFFF solid"></div>
+              <div style="width: 3px; height: 3px; left: 17px; top: 17px; position: absolute; border: 1px #00CFFF solid"></div>
+            </div>
+            <div style="width: 24px; height: 24px; left: 36px; top: 126px; position: absolute">
+              <div style="width: 12px; height: 12px; left: 5px; top: 5px; position: absolute; border-radius: 9999px; border: 1px rgba(84, 149, 165, 0.30) solid"></div>
+              <div style="width: 3px; height: 3px; left: 17px; top: 17px; position: absolute; border: 1px rgba(84, 149, 165, 0.30) solid"></div>
+            </div>
+            <div style="width: 24px; height: 24px; left: 697px; top: 80px; position: absolute">
+              <div style="width: 24px; height: 24px; left: 12px; top: -4.97px; position: absolute; transform: rotate(45deg); transform-origin: 0 0">
+                <div style="width: 10px; height: 2px; left: 7px; top: 11px; position: absolute; border: 1px #050505 solid"></div>
+                <div style="width: 2px; height: 10px; left: 11px; top: 7px; position: absolute; border: 1px #050505 solid"></div>
+                <div style="width: 20px; height: 20px; left: 2px; top: 2px; position: absolute; border: 1px #050505 solid"></div>
+              </div>
+            </div>
+            <div style="width: 740px; height: 47px; left: 0px; top: 1554px; position: absolute; background: #00CFFF"></div>
+            <div style="width: 111px; height: 14px; left: 333px; top: 1560px; position: absolute; color: white; font-size: 22px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Search</div>
+          </div>
     </body>
-    </html>
+</hthml>
