@@ -51,61 +51,143 @@
     <div style="width: 176px; height: 38.40px; left: 436px; top: 75px; position: absolute; text-align: center; color: #00CFFF; font-size: 20px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">For Sellers</div>
 </div>
            
+
+ <!--The Favorite Heart Icon-->
+ <div style="width: 16px; height: 16px; left: 1412px; top: 19px; position: absolute">
+    <img style="width: 14.67px; height: 13.33px; left: 0.67px; top: 0.67px; position: absolute; border: 1.50px" src="{{url_for ('static', filename='favoriteheart.png')}}" />
+</div>
+
+<!--Home Icon Top Navbar-->
+<div style="width: 16px; height: 16px; left: 1509px; top: 19px; position: absolute">
+    <img style="width: 12px; height: 13.45px; left: 2px; top: 1.33px; position: absolute; border: 1.50px " src="{{url_for ('static', filename='homeicon.png')}}">
+</div>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Real Estate Blog</title>
+    <title>Real Estate News</title>
     <style>
-        .post-listing-cont {
-            width: 620px; /* Optional: to center the entire content block */
-            margin: 0 auto; /* Optional: to center the entire content block */
+       
+        
+        .section {
+            position: absolute;
+            display: flex;
         }
-        .hs-featured-image-wrapper {
-            background: #ccc url('https://news.realestate.co.nz/hubfs/iStock-177817101.jpg') no-repeat;
-            background-size: cover;
-            background-position: center center;
-            width: 500px;
-            height: 600px;
-            position: absolute; /* Position it absolutely within the parent */
-            top: 120px;
-            left: 10px;
+        .section img {
+            border: 1.5px solid #ffffff;
         }
-        .text-container {
-            width: 500px;
-            margin: 10px 0 0 10px;
-            position: absolute; /* Position it absolutely within the parent */
-            top: 700px;
-            left: 10px;
+        .section-1 {
+            top: 139px;
+            left: 35px;
         }
+        .section-1 img {
+            width: 445px;
+            height: 382px;
+        }
+        .section-1 .title {
+            position: absolute;
+            top: 400px;
+            left: 0px;
+            width: 396px;
+            height: 175px;
+            font-weight: 800;
+            font-size: 32px;
+            line-height: 44px;
+            color: #5495A5;
+        }
+        .section-1 .content {
+            position: absolute;
+            top: 550px;
+            left: 0px;
+            width: 395px;
+            height: 407px;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 27px;
+            color: #000000;
+        }
+        .section-2 {
+            top: 139px;
+            left: 514px;
+        }
+        .section-2 img {
+            width: 722px;
+            height: 607px;
+        }
+        .section-2 .title {
+            position: absolute;
+            top: 630px;
+            left: 0px;
+            width: 546px;
+            height: 181px;
+            font-weight: 400;
+            font-size: 48px;
+            line-height: 65px;
+            color: #000000;
+        }
+        .section-2 .content {
+            position: absolute;
+            top: 830px;
+            left: 0px;
+            width: 713px;
+            height: 161px;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 33px;
+            color: #000000;
+        }
+        .section-3 {
+            top: 143px;
+            left: 1287px;
+        }
+        .section-3 img {
+            top: 200;
+            left: 0;
+            width: 360px;
+            height: 218px;
+
+        }
+        .section-3 .title {
+            position: absolute;
+            top: 250px;
+            left: 0px;
+            width: 370px;
+            height: 181px;
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 44px;
+            color: #000000;
+        }
+        .section-3 .content {
+            position: absolute;
+            top: 570px;
+            left: 0px;
+            width: 370px;
+            height: 181px;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 27px;
+            color: #000000;
+        }
+       
     </style>
 </head>
 <body>
-    <div class="post-listing-cont">
-        <div class="home-post-item">
-            <div class="featured-image">
-                <a href="https://news.realestate.co.nz/blog/new-zealand-property-market-2024-may">
-                    <div class="hs-featured-image-wrapper"></div>
-                </a>
-            </div>
-            <div class="text-container">
-                <div class="post-header">
-                    <a href="https://news.realestate.co.nz/blog/new-zealand-property-market-2024-may">
-                        <h3>Economic Headwinds fail to shake NZ property prices: What's the secret?</h3>
-                    </a>
-                </div>
-                <div class="description-container small_paragraph">
-                    <p>Despite strong economic headwinds, New Zealand's property prices have remained stable.</p>
-                </div> 
-                <div class="topic-container">
-                    <div id="hubspot-topic_data" class="topic-list">
-                        <a class="topic-link" href="https://news.realestate.co.nz/blog/tag/the-new-zealand-property-report">
-                            <h6>The New Zealand Property Report</h6>
-                        </a>
-                    </div>
-                </div>
-            </div>
+   
+    <div class="section section-1">
+        <img src="{{ url_for('static', filename='image16.png') }}" alt="Image 16">
+            <div class="title">Making the property journey more simple in your life first-of-its-kind tech</div>
+            <div class="content">When searching for property, are you tired of seeing homes that aren’t quite what you’re looking for? Our news How to personalize your search with listing minimize Are you tired of seeing properties that aren’t quite what you’re looking for?</div>
         </div>
-    </div>
+        <div class="section section-2">
+            <img src="{{ url_for('static', filename='image17.png') }}" alt="Image 17">
+            <div class="title">Sun-soaked property markets offers opportunities aplenty</div>
+            <div class="content">Stock levels hit an 8-year high as new listing levels bounce back to welcome buyers. Prices remained stable while Kiwis awaited th.... the New Zealand property Report</div>
+        </div>
+        <div class="section section-3">
+            <img src="{{ url_for('static', filename='image18.png') }}" alt="Image 18">
+            <div class="title">Real-Time feedback to share with vendors realestate.co.nz has a brand new feature that shares previously unavailable feedback from property s..</div>
+            <div class="content">5 searching features you need to try search right down to the street you want to live on, school zone, or properties with re... For buyers Tip and tricks</div>
 </body>
 
-</html>
+</html>} 

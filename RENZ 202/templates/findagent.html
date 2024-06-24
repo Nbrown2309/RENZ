@@ -1,1 +1,106 @@
-Resolved 
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Find Agent</title>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATmr6-kPMfM1tTNMk1Z4ILJKZHFasFBWI"></script>
+        <script>
+            function initMap() {
+                //default location Auckaland
+                var mapOptions = {
+                    center: { lat: -36.8485, lng: 174.7633 },
+                    zoom: 15
+                };
+                var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+            }
+    
+            window.onload = function() {
+                initMap();
+            };
+        </script>
+        <style>
+            #map {
+                width: 989px;
+                height: 1066px;
+                position: absolute;
+                left: 739px;
+                top: 51px;
+            }
+        </style>
+    </head>
+<body>
+    <div style="width: 100%; height: 100%; position: relative; background: white">
+        <div id="map" style="width: 989px; height: 1066px; left: 739px; top: 51px; position: absolute"></div>
+
+        <a href="/" style="text-decoration: none;">
+            <div style="left: 210px; top: 18px; position: absolute; color: #5495A5; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Residential</div>
+        </a>
+        <a href="/search" style="text-decoration: none;">
+            <div style="left: 326px; top: 18px; position: absolute; color: #5495A5; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">New Build</div>
+        </a>
+        <a href="/search" style="text-decoration: none;">
+            <div style="left: 435px; top: 18px; position: absolute; color: #5495A5; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Rural</div>
+        </a>
+        <a href="/search" style="text-decoration: none;">
+            <div style="left: 513px; top: 18px; position: absolute; color: #5495A5; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Commercial</div>
+        </a>
+        <a href="/search" style="text-decoration: none;">
+            <div style="left: 634px; top: 18px; position: absolute; color: #5495A5; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Business</div>
+        </a>
+        <a href="/search" style="text-decoration: none;">
+            <div style="left: 734px; top: 18px; position: absolute; color: #5495A5; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">House Price</div>
+        </a>
+        <a href="/findagent" style="text-decoration: none;">
+            <div style="left: 854px; top: 18px; position: absolute; color: #5495A5; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Find Agent</div>
+        </a>
+        <a href="/homeinspiration" style="text-decoration: none;">
+            <div style="left: 968px; top: 18px; position: absolute; color: #5495A5; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Home Inspiration</div>
+        </a>
+        <a href="/news" style="text-decoration: none;">
+            <div style="left: 1122px; top: 18px; position: absolute; color: #5495A5; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">News</div>
+        </a>
+        <a href="/favorite" style="text-decoration: none;">
+            <div style="left: 1433px; top: 18px; position: absolute; color: #5495A5; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Favorite<br/></div>
+        </a>
+        <a href="/myhome" style="text-decoration: none;">
+            <div style="left: 1528px; top: 18px; position: absolute; color: #5495A5; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">My Home</div>
+        </a>
+        <a href="/login_and_signup" style="text-decoration: none;">
+            <div style="left: 1611px; top: 18px; position: absolute; color: #5495A5; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Log in / Sign up</div>
+        </a>
+
+        <img style="width: 110px; height: 40px; left: 20px; top: 6px; position: absolute" src="{{url_for ('static', filename='renzlogo.png')}}" />
+
+
+        <!--The Favorite Heart Icon-->
+        <div style="width: 16px; height: 16px; left: 1412px; top: 19px; position: absolute">
+            <img style="width: 14.67px; height: 13.33px; left: 0.67px; top: 0.67px; position: absolute; border: 1.50px" src="{{url_for ('static', filename='favoriteheart.png')}}" />
+        </div>
+        
+        <!--Home Icon Code-->
+        <div style="width: 16px; height: 16px; left: 1509px; top: 19px; position: absolute">
+                <img style="width: 12px; height: 13.45px; left: 2px; top: 1.33px; position: absolute; border: 1.50px" src="{{url_for('static', filename='homeicon.png')}}" />
+            </div>
+        <div style="width: 712px; height: 92px; left: 11px; top: 59px; position: absolute">
+            <div style="width: 712px; height: 92px; left: 0px; top: 0px; position: absolute; box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.10); border-radius: 8px; border: 1px #5495A5 solid"></div>
+            <div style="width: 437px; height: 31px; left: 13px; top: 47px; position: absolute; border-radius: 5px; border: 1px #5495A5 solid"></div>
+            <div style="width: 114px; height: 33px; left: 461px; top: 46px; position: absolute; border-radius: 5px; border: 1px #5495A5 solid"></div>
+            <div style="width: 114px; height: 33px; left: 585px; top: 46px; position: absolute; border-radius: 5px; border: 1px #5495A5 solid"></div>
+            <div style="left: 122px; top: 10px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">Buy</div>
+            <div style="left: 50px; top: 54px; position: absolute; color: #CACACA; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">Search by address, suburb or city</div>
+            <div style="left: 518px; top: 55px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">Filter</div>
+            <div style="left: 634px; top: 55px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">Search</div>
+            <div style="left: 531px; top: 10px; position: absolute; color: black; font-size: 12px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">Rent</div>
+            <div style="width: 712px; height: 0px; left: 0px; top: 38px; position: absolute; border: 1px #5495A5 solid"></div>
+        </div>
+
+        <a href="/agentsearch"><img style="width: 710px; height: 110px; left: 15px; top: 160px; position: absolute" src="{{ url_for('static', filename='agent1.png')}}" />
+        <a href="/agentsearch"><img style="width: 710px; height: 110px; left: 15px; top: 280px; position: absolute" src="{{ url_for('static', filename='agent2.png')}}" />
+        <a href="/agentsearch"><img style="width: 710px; height: 110px; left: 15px; top: 400px; position: absolute" src="{{ url_for('static', filename='agent3.png')}}" />
+        <a href="/agentsearch"><img style="width: 710px; height: 110px; left: 15px; top: 520px; position: absolute" src="{{ url_for('static', filename='agent4.png')}}" />
+        <a href="/agentsearch"><img style="width: 710px; height: 110px; left: 15px; top: 640px; position: absolute" src="{{ url_for('static', filename='agent5.png')}}" />
+        <a href="/agentsearch"><img style="width: 710px; height: 110px; left: 15px; top: 760px; position: absolute" src="{{ url_for('static', filename='agent1.png')}}" />
+        <a href="/agentsearch"><img style="width: 710px; height: 110px; left: 15px; top: 880px; position: absolute" src="{{ url_for('static', filename='agent2.png')}}" />
+        <a href="/agentsearch"><img style="width: 710px; height: 110px; left: 15px; top: 1000px; position: absolute" src="{{ url_for('static', filename='agent3.png')}}" />
+    </div>
+</body>
+</html>
