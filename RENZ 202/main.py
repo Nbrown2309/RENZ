@@ -80,6 +80,14 @@ def sign_up():
 @app.route('/propertyupload')
 def upload_form():
     return render_template('propertyupload.html')
+
+@app.route('/detail')
+def detail():
+    return render_template('detail.html')
+
+@app.route('/filterpopup')
+def filterpopup():
+    return render_template('filterpopup.html')
  
 # Route for the form page
 @app.route('/')

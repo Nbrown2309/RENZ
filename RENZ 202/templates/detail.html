@@ -83,7 +83,7 @@
     <!--Mainly the following pages navigate from main page the search page
     others can navigate from their own pages-->
     <div style="width: 100%; height: 100%; position: relative; background: white">
-        <a href="/search" style="text-decoration: none;">
+        <a href="/searcb" style="text-decoration: none;">
             <div style="left: 210px; top: 18px; position: absolute; color: #5495A5; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Residential</div>
         </a>
         <a href="/search" style="text-decoration: none;">
@@ -119,8 +119,9 @@
         <a href="/login_and_signup" style="text-decoration: none;">
             <div style="left: 1611px; top: 18px; position: absolute; color: #5495A5; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Log in / Sign up</div>
         </a>
-        <!--Adding Our logo to the navigation bar-->
-        <img style="width: 100px; height: 40px; left: 11px; top: 6px; position: absolute" src="{{ url_for('static', filename='renzlogo.png') }}" />
+        <a href="/" style="text-decoration: none;">
+            <img style="width: 110px; height: 40px; left: 20px; top: 6px; position: absolute" src= "{{url_for ('static', filename='renzlogo.png')}}" />
+            </a>
     </div>
 
     <!--The Favorite Heart Icon-->
