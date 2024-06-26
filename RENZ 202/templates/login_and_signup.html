@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Log In and Sign Up </title>
-        <link rel="stylesheet" href="style.css">
-        <style>
-            body {
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In and Sign Up </title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
             margin: 0;
             padding: 0;
             font-family: Noto Sans, sans-serif;
-            }
-            
-            .container {
+        }
+ 
+        .container {
             width: 100%;
             height: 100%;
             position: relative;
             background: white;
         }
+ 
         .centered {
             text-align: center;
             color: #606060;
@@ -24,6 +25,7 @@
             font-weight: 500;
             word-wrap: break-word;
         }
+ 
         .input-container {
             width: 528px;
             height: 57px;
@@ -32,6 +34,7 @@
             border-radius: 5px;
             border: 1px #5495A5 solid;
         }
+ 
         .input-field {
             width: 90%;
             height: 40px;
@@ -39,6 +42,7 @@
             border: none;
             font-size: 16px;
         }
+ 
         .button {
             width: 528px;
             height: 57px;
@@ -53,98 +57,101 @@
             border: none;
             border-radius: 5px;
         }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <div style="width: 24px; height: 24px; left: 510px; top: 17px; position: absolute" onclick="navigateTo('index.html')">
-                <img style="width: 18px; height: 18px; left: 3px; top: 3px; position: absolute" src="{{ url_for('static', filename='exitbutton.png') }}" />
-            </div>
-            <img style="width: 534px; height: 63px; left: 5px; top: 265px; position: absolute" src="{{ url_for('static', filename='facebook.png') }}" />
-            <img style="width: 533px; height: 62px; left: 5px; top: 332px; position: absolute" src="{{ url_for('static', filename='google.png') }}" />
-            <div style="width: 24px; height: 24px; left: 29px; top: 478px; position: absolute">
-                <div style="width: 20px; height: 14px; left: 2px; top: 5px; position: absolute; border: 1px #5595A5 solid"></div>
-                <div style="width: 20px; height: 9px; left: 2px; top: 5px; position: absolute; border: 1px #5595A5 solid"></div>
-                <div style="width: 7px; height: 8px; left: 2px; top: 11px; position: absolute; border: 1px #5595A5 solid"></div>
-                <div style="width: 7px; height: 8px; left: 15px; top: 11px; position: absolute; border: 1px #5595A5 solid"></div>
-            </div>
-            <div style="width: 24px; height: 24px; left: 29px; top: 544px; position: absolute">
-                <div style="width: 24px; height: 24px; left: 0px; top: 0px; position: absolute">
-                    <div style="width: 14px; height: 10px; left: 5px; top: 11px; position: absolute; border: 1px #5595A5 solid"></div>
-                    <div style="width: 10px; height: 8px; left: 7px; top: 3px; position: absolute; border-top-left-radius: 100px; border-top-right-radius: 100px; border: 1px #5595A5 solid"></div>
-                </div>
-                <div style="width: 2px; height: 2px; left: 11px; top: 15px; position: absolute; border: 1px #5595A5 solid"></div>
-            </div>
-            <img style="width: 209px; height: 96px; left: 160px; top: 46px; position: absolute" src="{{url_for('static', filename='renzlogo.png')}}" />
-
-
-            <!--Navigating from the sign in to the log in features usign javascript-->
-            <div style="left: 94px; top: 202px; position: absolute; color: #5495A5; font-size: 20px; font-weight: 700; cursor: pointer;" onclick="showLogin()">Log in</div>
-            <div style="left: 367px; top: 202px; position: absolute; color: #5495A5; font-size: 20px; font-weight: 700; cursor: pointer;" onclick="showSignUp()">Sign up</div>
-            <div style="width: 544px; height: 0px; left: 0px; top: 241px; position: absolute; border: 1px #5495A5 solid"></div>
-            <div style="width: 204px; height: 0px; left: 22px; top: 240px; position: absolute; border: 4px #5495A5 solid" id="tab-indicator"></div>
-            <div class="input-container" style="top: 462px;" id="email-container">
-                <input type="email" id="email" class="input-field" placeholder="yours@example.com">
-            </div>
-            <div class="input-container" style="top: 528px;" id="password-container">
-                <input type="password" id="password" class="input-field" placeholder="Your Password">
-            </div>
-            <div class="input-container" style="top: 594px; display: none;" id="confirm-password-container">
-                <input type="password" id="confirm-password" class="input-field" placeholder="Confirm Password">
-            </div>
-            <div class="button" style="top: 741px;" id="submit-button" onclick="submitForm()">Log in</div>
-        </div>
-
-
-        <!--Using A little Javascript in this log in page-->
-        <script>
-            function showLogin() {
-                document.getElementById('tab-indicator').style.left = '22px';
-                document.getElementById('confirm-password-container').style.display = 'none';
-                document.getElementById('submit-button').innerText = 'Log in';
-            }
-    
-            function showSignUp() {
-                document.getElementById('tab-indicator').style.left = '367px';
-                document.getElementById('confirm-password-container').style.display = 'block';
-                document.getElementById('submit-button').innerText = 'Sign up';
-            }
-    
-            function submitForm() {
-                const email = document.getElementById('email').value;
-                const password = document.getElementById('password').value;
-                const confirmPassword = document.getElementById('confirm-password').value;
-                const action = document.getElementById('submit-button').innerText.toLowerCase();
-    
-                if (action === 'sign up' && password !== confirmPassword) {
-                    alert('Passwords do not match!');
-                    return;
-                }
-    
-                fetch(`/api/${action}`, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({ email, password })
-                })
-                .then(response => response.json())
-                .then(data => {
-                    if (data.success) {
-                        alert(`${action} successful!`);
-                        if (action === 'log in') {
-                            window.location.href = '/home';
-                        }
-                    } else {
-                        alert(data.message);
+    </style>
+</head>
+<body>
+<div class="container">
+    <img style="width: 209px; height: 96px; left: 160px; top: 46px; position: absolute"
+         src="{{url_for('static', filename='renzlogo.png')}}" />
+ 
+    <!-- login/signup tab-->
+    <div style="left: 94px; top: 202px; position: absolute; color: #5495A5; font-size: 20px; font-weight: 700; cursor: pointer;"
+         onclick="showLogin()">Log in
+    </div>
+    <div style="left: 367px; top: 202px; position: absolute; color: #5495A5; font-size: 20px; font-weight: 700; cursor: pointer;"
+         onclick="showSignUp()">Sign up
+    </div>
+    <div style="width: 544px; height: 0px; left: 0px; top: 241px; position: absolute; border: 1px #5495A5 solid"></div>
+    <div style="width: 204px; height: 0px; left: 22px; top: 240px; position: absolute; border: 4px #5495A5 solid"
+         id="tab-indicator"></div>
+         <img style="width: 534px; height: 63px; left: 5px; top: 265px; position: absolute" src="{{ url_for('static', filename='facebook.png') }}" />
+         <img style="width: 533px; height: 62px; left: 5px; top: 332px; position: absolute" src="{{ url_for('static', filename='google.png') }}" />
+ 
+    <!-- login -->
+    <div class="input-container" style="top: 462px;" id="email-container">
+        <input type="email" id="email" class="input-field" placeholder="yours@example.com">
+    </div>
+    <div class="input-container" style="top: 528px;" id="password-container">
+        <input type="password" id="password" class="input-field" placeholder="Your Password">
+    </div>
+ 
+    <!-- signup -->
+    <div class="input-container" style="top: 594px; display: none;" id="name-container">
+        <input type="text" id="name" class="input-field" placeholder="Your Name">
+    </div>
+    <div class="input-container" style="top: 660px; display: none;" id="confirm-password-container">
+        <input type="password" id="confirm-password" class="input-field" placeholder="Confirm Password">
+    </div>
+ 
+    <!-- button -->
+    <div class="button" style="top: 741px;" id="submit-button" onclick="submitForm()">Log in</div>
+</div>
+ 
+ 
+<script>
+    function showLogin() {
+        document.getElementById('tab-indicator').style.left = '22px';
+        document.getElementById('name-container').style.display = 'none';
+        document.getElementById('confirm-password-container').style.display = 'none';
+        document.getElementById('submit-button').innerText = 'Log in';
+    }
+ 
+    function showSignUp() {
+        document.getElementById('tab-indicator').style.left = '290px';
+        document.getElementById('name-container').style.display = 'block';
+        document.getElementById('confirm-password-container').style.display = 'block';
+        document.getElementById('submit-button').innerText = 'Sign up';
+    }
+ 
+    function submitForm() {
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        const name = document.getElementById('name').value;
+        const confirmPassword = document.getElementById('confirm-password').value;
+        const action = document.getElementById('submit-button').innerText.toLowerCase();
+ 
+        if (action === 'sign up' && password !== confirmPassword) {
+            alert('Passwords do not match!');
+            return;
+        }
+ 
+        let data = { email: email, password: password };
+        if (action === 'sign up') {
+            data.name = name;
+            data.phone_number = ''; // Add phone number if needed
+            data.address = ''; // Add address if needed
+        }
+ 
+        fetch(`/api/${action.replace(' ', '')}`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert(`${action} successful!`);
+                    if (action === 'log in') {
+                        window.location.href = '/home';
                     }
-                });
-            }
-    
-            function navigateTo(page) {
-                window.location.href = `/${page}`;
-            }
-        </script>
-
-    </body>
+                } else {
+                    alert(data.message);
+                }
+            });
+    }
+</script>
+ 
+</body>
 </html>

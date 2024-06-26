@@ -43,17 +43,17 @@
     <img style="width: 110px; height: 40px; left: 20px; top: 6px; position: absolute" src= "{{url_for ('static', filename='renzlogo.png')}}" />
     
 
+    <!--The Favorite Heart Icon-->
     <div style="width: 16px; height: 16px; left: 1412px; top: 19px; position: absolute">
-        <div style="width: 14.67px; height: 13.33px; left: 0.67px; top: 0.67px; position: absolute; border: 1.50px #396874 solid"></div>
+        <img style="width: 14.67px; height: 13.33px; left: 0.67px; top: 0.67px; position: absolute; border: 1.50px" src="{{url_for ('static', filename='favoriteheart.png')}}" />
     </div>
+    
+    <!--Home Icon Top Navbar-->
     <div style="width: 16px; height: 16px; left: 1509px; top: 19px; position: absolute">
-        <div style="width: 16px; height: 16px; left: 0px; top: 0px; position: absolute">
-            <div style="width: 12px; height: 13.45px; left: 2px; top: 1.33px; position: absolute; border: 1.50px #396874 solid"></div>
-        </div>
-        <div style="width: 4px; height: 5.33px; left: 6px; top: 9.33px; position: absolute; border-radius: 1px; border: 1.50px #396874 solid"></div>
+        <img style="width: 12px; height: 13.45px; left: 2px; top: 1.33px; position: absolute; border: 1.50px " src="{{url_for ('static', filename='homeicon.png')}}">
     </div>
 
-
+    
 
     <head>
         <meta charset="UTF-8">
@@ -191,11 +191,75 @@ Over the course of his 15 plus years in real estate, Karl has experience his fai
 
 Whilst the real estate market is anything but consistent, Karl's commitment to providing clients with the highest level of service & knowledge has been unwavering. His high level of repeat business is testament to this.</div>
             </div>
-            <div style="width: 750px; height: 0px; left: 630px; top: 380px; position: absolute; border: 1px #00CFFF solid"></div>
-            <div class="section section-3">
-                <img src="{{ url_for('static', filename='image18.png') }}" alt="Image 18">
-                <div class="title">Real-Time feedback to share with vendors realestate.co.nz has a brand new feature that shares previously unavailable feedback from property s..</div>
-                <div class="content">5 searching features you need to try search right down to the street you want to live on, school zone, or properties with re... For buyers Tip and tricks</div>
-                
+
+
+            <!--Top Section of the images-->
+            <!--For Rent Sale Box's-->
+        <div style="width: 202px; height: 164px; left: 632px; top: 1098px; position: absolute">
+            <a href="/detail">
+                <img style="width: 202px; height: 123px; left: 0px; top: 0px; position: absolute" src="{{url_for('static', filename='property.png')}}" />
+                <img style="width: 51px; height: 12px; left: 151px; top: 135px; position: absolute" src="{{url_for('static', filename='occupants.png')}}" />
+            </a>
+            <div style="left: 0px; top: 132px; position: absolute; color: black; font-size: 11px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">To be sold by auction on...</div>
+            <div style="left: 0px; top: 153px; position: absolute; color: black; font-size: 8px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">1/23 Ashwell Street, Saint Heliers</div>
+            <div style="left: 155px; top: 153px; position: absolute; text-align: right; color: black; font-size: 8px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">30 Mar 2024</div>
+        </div>
+
+        <div style="width: 202px; height: 164px; left: 880px; top: 1098px; position: absolute">
+            <a href="/detail">
+                <img style="width: 202px; height: 123px; left: 0px; top: 0px; position: absolute" src="{{url_for('static', filename='property.png')}}" />
+                <img style="width: 51px; height: 12px; left: 151px; top: 135px; position: absolute" src="{{url_for('static', filename='occupants.png')}}" />
+            </a>
+            <div style="left: 0px; top: 132px; position: absolute; color: black; font-size: 11px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">To be sold by auction on...</div>
+            <div style="left: 0px; top: 153px; position: absolute; color: black; font-size: 8px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">1/23 Ashwell Street, Saint Heliers</div>
+            <div style="left: 155px; top: 153px; position: absolute; text-align: right; color: black; font-size: 8px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">30 Mar 2024</div>
+        </div>
+
+        <div style="width: 202px; height: 164px; left: 1130px; top: 1098px; position: absolute">
+            <a href="/detail">
+                <img style="width: 202px; height: 123px; left: 0px; top: 0px; position: absolute" src="{{url_for('static', filename='property.png')}}" />
+                <img style="width: 51px; height: 12px; left: 151px; top: 135px; position: absolute" src="{{url_for('static', filename='occupants.png')}}" />
+            </a>
+            <div style="left: 0px; top: 132px; position: absolute; color: black; font-size: 11px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">To be sold by auction on...</div>
+            <div style="left: 0px; top: 153px; position: absolute; color: black; font-size: 8px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">1/23 Ashwell Street, Saint Heliers</div>
+            <div style="left: 155px; top: 153px; position: absolute; text-align: right; color: black; font-size: 8px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">30 Mar 2024</div>
+        </div>
+
+        <!--Display text's "For Sale & Sold"-->
+        <div style="left: 630px; top: 1040px; position: absolute; color: black; font-size: 24px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">For Sale</div>
+
+        <div style="left: 750px; top: 1040px; position: absolute; color: black; font-size: 24px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Sold</div>
+
+        <!--Bottom Section of Images-->
+        <div style="width: 202px; height: 164px; left: 632px; top: 1280px; position: absolute">
+            <a href="/detail">
+                <img style="width: 202px; height: 123px; left: 0px; top: 0px; position: absolute" src="{{url_for('static', filename='property.png')}}" />
+                <img style="width: 51px; height: 12px; left: 151px; top: 135px; position: absolute" src="{{url_for('static', filename='occupants.png')}}" />
+            </a>
+            <div style="left: 0px; top: 132px; position: absolute; color: black; font-size: 11px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">To be sold by auction on...</div>
+            <div style="left: 0px; top: 153px; position: absolute; color: black; font-size: 8px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">1/23 Ashwell Street, Saint Heliers</div>
+            <div style="left: 155px; top: 153px; position: absolute; text-align: right; color: black; font-size: 8px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">30 Mar 2024</div>
+        </div>
+
+        <div style="width: 202px; height: 164px; left: 880px; top: 1280px; position: absolute">
+            <a href="/detail">
+                <img style="width: 202px; height: 123px; left: 0px; top: 0px; position: absolute" src="{{url_for('static', filename='property.png')}}" />
+                <img style="width: 51px; height: 12px; left: 151px; top: 135px; position: absolute" src="{{url_for('static', filename='occupants.png')}}" />
+            </a>
+            <div style="left: 0px; top: 132px; position: absolute; color: black; font-size: 11px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">To be sold by auction on...</div>
+            <div style="left: 0px; top: 153px; position: absolute; color: black; font-size: 8px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">1/23 Ashwell Street, Saint Heliers</div>
+            <div style="left: 155px; top: 153px; position: absolute; text-align: right; color: black; font-size: 8px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">30 Mar 2024</div>
+        </div>
+
+        <div style="width: 202px; height: 164px; left: 1130px; top: 1280px; position: absolute">
+            <a href="/detail">
+                <img style="width: 202px; height: 123px; left: 0px; top: 0px; position: absolute" src="{{url_for('static', filename='property.png')}}" />
+                <img style="width: 51px; height: 12px; left: 151px; top: 135px; position: absolute" src="{{url_for('static', filename='occupants.png')}}" />
+            </a>
+            <div style="left: 0px; top: 132px; position: absolute; color: black; font-size: 11px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">To be sold by auction on...</div>
+            <div style="left: 0px; top: 153px; position: absolute; color: black; font-size: 8px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">1/23 Ashwell Street, Saint Heliers</div>
+            <div style="left: 155px; top: 153px; position: absolute; text-align: right; color: black; font-size: 8px; font-family: Noto Sans; font-weight: 500; word-wrap: break-word">30 Mar 2024</div>
+        </div>
+
     </body>
 </html>
