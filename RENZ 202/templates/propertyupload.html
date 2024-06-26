@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<div style="width: 100%; height: 100%; position: relative; background: white">
+   
+    <img style="width: 110px; height: 40px; left: 20px; top: 6px; position: absolute" src= "{{url_for ('static', filename='renzlogo.png')}}" />
+    <a href="/" style="text-decoration: none;">
+        <div style="left: 210px; top: 18px; position: absolute; color: #5495A5; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Residential</div>
+    </a>
+    <a href="/search" style="text-decoration: none;">
+        <div style="left: 326px; top: 18px; position: absolute; color: #5495A5; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">New Build</div>
+    </a>
+    <a href="/search" style="text-decoration: none;">
+        <div style="left: 435px; top: 18px; position: absolute; color: #5495A5; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Rural</div>
+    </a>
+    <a href="/search" style="text-decoration: none;">
+        <div style="left: 513px; top: 18px; position: absolute; color: #5495A5; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Commercial</div>
+    </a>
+    <a href="/search" style="text-decoration: none;">
+        <div style="left: 634px; top: 18px; position: absolute; color: #5495A5; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Business</div>
+    </a>
+    <a href="/search" style="text-decoration: none;">
+        <div style="left: 734px; top: 18px; position: absolute; color: #5495A5; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">House Price</div>
+    </a>
+    <a href="/findagent" style="text-decoration: none;">
+        <div style="left: 854px; top: 18px; position: absolute; color: #5495A5; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Find Agent</div>
+    </a>
+    <a href="/homeinspiration" style="text-decoration: none;">
+        <div style="left: 968px; top: 18px; position: absolute; color: #5495A5; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Home Inspiration</div>
+    </a>
+    <a href="/news" style="text-decoration: none;">
+        <div style="left: 1122px; top: 18px; position: absolute; color: #5495A5; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">News</div>
+    </a>
+    <a href="/favorite" style="text-decoration: none;">
+        <div style="left: 1433px; top: 18px; position: absolute; color: #5495A5; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Favorite<br/></div>
+    </a>
+    <a href="/myhome" style="text-decoration: none;">
+        <div style="left: 1528px; top: 18px; position: absolute; color: #5495A5; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">My Home</div>
+    </a>
+    <a href="/login_and_signup" style="text-decoration: none;">
+        <div style="left: 1611px; top: 18px; position: absolute; color: #5495A5; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Log in / Sign up</div>
+    </a>
+
+    <div style="width: 176px; height: 38.40px; left: 260px; top: 75px; position: absolute; text-align: center; color: #000000; font-size: 20px; font-family: 'Noto Sans', sans-serif; font-weight: 700; word-wrap: break-word">Property Upload</div>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Property Upload Page</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: 'Noto Sans', sans-serif;
+                background-color: #FFFFFF;
+            }
+            .container {
+                position: relative;
+                top: 120px;
+                width: 1728px;
+                margin: 20px auto;
+            }
+            .nav-item {
+                position: absolute;
+                font-weight: 700;
+                font-size: 13px;
+                line-height: 18px;
+                color: #00CFFF;
+            }
+            .section {
+                position: relative;
+                width: 1174px;
+                margin: 20px auto;
+                border: 1px solid #00CFFF;
+                filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.1));
+                border-radius: 8px;
+                padding: 10px;
+                margin-top: 20px;
+                margin-bottom: 20px; /* Add margin-bottom for spacing */
+            }
+            .section-title {
+                font-weight: 700;
+                font-size: 13px;
+                color: #434343;
+                margin-bottom: 10px;
+            }
+            .form-group {
+                margin-bottom: 20px;
+            }
+            .form-group label {
+                display: block;
+                font-weight: 700;
+                font-size: 13px;
+                color: #434343;
+                margin-bottom: 5px;
+            }
+            .form-group input, .form-group textarea, .form-group select {
+                width: calc(100% - 20px);
+                padding: 10px;
+                border: 1px solid #00CFFF;
+                border-radius: 5px;
+                box-sizing: border-box;
+            }
+            .form-group textarea {
+                height: 100px;
+                resize: none;
+            }
+            .submit-btn, .save-btn {
+                position: absolute;
+                left: 1350px;
+                top: 1800px;
+                width: 114px;
+                height: 33px;
+                border: 1px solid #00CFFF;
+                border-radius: 5px;
+                background-color: #00CFFF;
+                color: #FFFFFF;
+                font-weight: 500;
+                font-size: 12px;
+                cursor: pointer;
+            }
+            .photo-list {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+            .photo-list li {
+                font-weight: 700;
+                font-size: 13px;
+                color: #818181;
+                margin-bottom: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <form action="/submit" method="POST" enctype="multipart/form-data">
+                <div class="section">
+                    <div class="form-group">
+                        <label for="location">Location</label>
+                        <input type="text" id="location" name="location" placeholder="Search for a location">
+                    </div>
+                </div>
+                <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATmr6-kPMfM1tTNMk1Z4ILJKZHFasFBWI&libraries=places&callback=initAutocomplete"></script>
+                <script>
+                    function initAutocomplete() {
+                        const input = document.getElementById('location');
+                        const autocomplete = new google.maps.places.Autocomplete(input);
+                    }
+                    document.addEventListener('DOMContentLoaded', function() {
+                        initAutocomplete();
+                    });
+                </script>
+                <div class="section">
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input type="text" id="title" name="title" placeholder="Enter a title">
+                    </div>
+                </div>
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+                <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+                <div class="section">
+                    <div class="form-group sales-date-group">
+                        <label for="salesdate">Sales Date</label>
+                        <input type="text" id="salesdate" name="salesdate" placeholder="Select a date">
+                    </div>
+                </div>
+                <script>
+                    flatpickr('#salesdate', {
+                        enableTime: false, 
+                        dateFormat: "Y-m-d", 
+                        minDate: "today", 
+                    });
+                </script>
+                <div class="section">
+                    <div class="form-group">
+                        <label for="subtitle">SubTitle</label>
+                        <input type="text" id="subtitle" name="subtitle" placeholder="Enter a subtitle">
+                    </div>
+                </div>  
+                <div class="section">
+                    <div class="form-group sales-type-group">
+                        <label for="salestype">Sales Type</label>
+                        <select id="salestype" name="salestype">
+                            <option value="displayprice">Display Price</option>
+                            <option value="negotiation">Negotiation</option>
+                            <option value="auction">Auction</option>
+                            <option value="tender">Tender</option>
+                            <option value="poa">POA</option>
+                            <option value="offers">Offers</option>
+                            <option value="deadlinesale">Deadline Sale</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="form-group">
+                        <label for="propertydetail">Property Detail</label>
+                        <textarea id="propertydetail" name="propertydetail" placeholder="Enter a property detail"></textarea>
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="form-group">
+                        <label for="description">Property Description</label>
+                        <textarea id="description" name="description" placeholder="Enter a property description"></textarea>
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="section-title">Photos</div>
+                    <div class="form-group">
+                        <input type="file" id="photos" name="photos" multiple>
+                    </div>
+                    <ul class="photo-list" id="photo-list">
+                       
+                    </ul>
+                </div>
+                <script>
+                    document.getElementById('photos').addEventListener('change', function(event) {
+                        const photoList = document.getElementById('photo-list');
+                        photoList.innerHTML = ''; // Clear the list first
+                        for (const file of event.target.files) {
+                            const listItem = document.createElement('li');
+                            const img = document.createElement('img');
+                            img.src = URL.createObjectURL(file);
+                            img.onload = () => URL.revokeObjectURL(img.src); // Free memory
+                            img.style.width = '100px'; // Thumbnail size
+                            img.style.height = '100px'; // Thumbnail size
+                            img.style.objectFit = 'cover';
+                            img.style.marginRight = '10px';
+                            listItem.appendChild(img);
+                            photoList.appendChild(listItem);
+                        }
+                    });
+                </script>
+                <div class="section">
+                    <div class="form-group">
+                        <label for="pricerange">Price Range</label>
+                        <div class="dropdown-group">
+                            <select id="pricerange-low" name="pricerange-low">
+                                <option value="">Low</option>
+                                <option value="100000">$100,000</option>
+                                <option value="200000">$200,000</option>
+                                <option value="300000">$300,000</option>
+                                <option value="400000">$400,000</option>
+                                <option value="500000">$500,000</option>
+                                <option value="600000">$600,000</option>
+                                <option value="700000">$700,000</option>
+                                <option value="800000">$800,000</option>
+                                <option value="900000">$900,000</option>
+                                <option value="1000000">$1,000,000</option>
+                                <option value="5000000">$5,000,000</option>
+                                <option value="10000000">$10,000,000</option>
+                            </select>
+                            <select id="pricerange-medium" name="pricerange-medium">
+                                <option value="">Medium</option>
+                                <option value="100000">$100,000</option>
+                                <option value="200000">$200,000</option>
+                                <option value="300000">$300,000</option>
+                                <option value="400000">$400,000</option>
+                                <option value="500000">$500,000</option>
+                                <option value="600000">$600,000</option>
+                                <option value="700000">$700,000</option>
+                                <option value="800000">$800,000</option>
+                                <option value="900000">$900,000</option>
+                                <option value="1000000">$1,000,000</option>
+                                <option value="5000000">$5,000,000</option>
+                                <option value="10000000">$10,000,000</option>
+                            </select>
+                            <select id="pricerange-high" name="pricerange-high">
+                                <option value="">High</option>
+                                <option value="100000">$100,000</option>
+                                <option value="200000">$200,000</option>
+                                <option value="300000">$300,000</option>
+                                <option value="400000">$400,000</option>
+                                <option value="500000">$500,000</option>
+                                <option value="600000">$600,000</option>
+                                <option value="700000">$700,000</option>
+                                <option value="800000">$800,000</option>
+                                <option value="900000">$900,000</option>
+                                <option value="1000000">$1,000,000</option>
+                                <option value="5000000">$5,000,000</option>
+                                <option value="10000000">$10,000,000</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="form-group capital-value-group">
+                        <label for="capitalvalue">Capital Value</label>
+                        <select id="capitalvalue" name="capitalvalue">
+                            <option value="100000">$100,000</option>
+                            <option value="200000">$200,000</option>
+                            <option value="300000">$300,000</option>
+                            <option value="400000">$400,000</option>
+                            <option value="500000">$500,000</option>
+                            <option value="600000">$600,000</option>
+                            <option value="700000">$700,000</option>
+                            <option value="800000">$800,000</option>
+                            <option value="900000">$900,000</option>
+                            <option value="1000000">$1,000,000</option>
+                            <option value="5000000">$5,000,000</option>
+                            <option value="10000000">$10,000,000</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="form-group">
+                        <label for="agent-name">Name</label>
+                        <input type="text" id="agent-name" name="agent-name" placeholder="Enter your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="agent-email">Email</label>
+                        <input type="email" id="agent-email" name="agent-email" placeholder="Enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="agent-phone">Phone</label>
+                        <input type="tel" id="agent-phone" name="agent-phone" placeholder="Enter your phone number">
+                    </div>
+                </div>
+                </div>
+                <div class="button-group">
+                    <button type="submit" class="save-btn">Save All</button>
+                </div>
+            </form>
+        </div>
+    </body>
+ 
+    
+    <div style="width: 942px; height: 31px; left: 385px; top: 3000px; position: absolute">
+        <div style="left: 0px; top: 7px; position: absolute; color: #3B6974; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">About</div>
+        <div style="left: 99px; top: 7px; position: absolute; color: #3B6974; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Careers</div>
+        <div style="left: 208px; top: 7px; position: absolute; color: #3B6974; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Contact</div>
+        <div style="left: 307px; top: 7px; position: absolute; color: #3B6974; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Help</div>
+        <div style="left: 396px; top: 7px; position: absolute; color: #3B6974; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Terms</div>
+        <div style="left: 495px; top: 7px; position: absolute; color: #3B6974; font-size: 13px; font-family: Noto Sans; font-weight: 700; word-wrap: break-word">Privacy</div>
+        <div style="width: 31px; height: 31px; left: 779px; top: 0px; position: absolute">
+        <div style="width: 31px; height: 30.89px; left: 0px; top: 0px; position: absolute; background: #0866FF"></div>
+        <div style="width: 14.13px; height: 25.26px; left: 8.56px; top: 5.74px; position: absolute; background: white"></div>
+        </div>
+        <div style="width: 31px; height: 31px; left: 911px; top: 0px; position: absolute">
+        <div style="width: 28.42px; height: 25.69px; left: 1.29px; top: 2.46px; position: absolute; background: black"></div>
+        </div>
+        <div style="width: 31px; height: 31px; left: 823px; top: 0px; position: absolute">
+        <div style="width: 30.98px; height: 30.99px; left: 0px; top: 0px; position: absolute; background: #000100"></div>
+        <div style="width: 15.92px; height: 15.92px; left: 7.54px; top: 7.54px; position: absolute; background: #000100"></div>
+        <div style="width: 3.72px; height: 3.72px; left: 21.92px; top: 5.36px; position: absolute; background: #000100"></div>
+        </div>
+        <div style="width: 31px; height: 31px; left: 867px; top: 0px; position: absolute">
+        <div style="width: 31px; height: 31px; left: -0px; top: -0px; position: absolute; background: #0A66C2"></div>
+        </div>
+    </div>
+
+
+</html>
